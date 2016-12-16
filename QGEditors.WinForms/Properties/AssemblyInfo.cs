@@ -15,11 +15,11 @@ using System.Runtime.InteropServices;
 // 与程序集关联的信息。
 [assembly: CLSCompliant(true)]
 [assembly: AssemblyTitle("QGEditors.WinForms")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("The extended Windows.Forms controls")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("QGEditors.WinForms")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyProduct("QGEditors")]
+[assembly: AssemblyCopyright("Copyright ©  2016 - GuQiang")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
