@@ -8,6 +8,10 @@ using System.ComponentModel;
 
 namespace QGEditors.WinForms
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.ComponentModel.PropertyChangedEventArgs" />
     public class PropertyChangedEventArgsEx : PropertyChangedEventArgs
     {
         #region Fields

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/d349b35c-b5d5-4155-9f2e-c4a2f604dc15.htm" />
+  <HelpTOCNode Id="a68385a3-c9d8-4dd5-be57-c9e606372f78" Title="Version History" Url="html/277b26d8-ae2f-4a8e-bc19-95dadb38a0fd.htm">
+    <HelpTOCNode Title="Version 1.0.0.0" Url="html/65c436a0-1596-41a1-9a10-e1844bf9ada2.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="11a4522c-f1d2-481b-8027-07767b0f827a" Title="QGEditors.WinForms" Url="html/2b8881d5-a568-0c17-9776-8cfe96b872eb.htm">
+    <HelpTOCNode Title="ButtonPredefines Enumeration" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+    <HelpTOCNode Id="66ff0bd0-edec-4757-bcb9-00c5f099b2d9" Title="ButtonPressedEventArgs Class" Url="html/8d1b9975-3d37-58d2-8e15-7995b766bae2.htm">
+      <HelpTOCNode Title="ButtonPressedEventArgs Constructor " Url="html/6a98f2cb-4e37-702f-70c4-3a07ff2e215a.htm" />
+      <HelpTOCNode Id="b491c4d7-41ce-4dc4-a889-e9a316532887" Title="ButtonPressedEventArgs Properties" Url="html/7a6df82b-c92d-bcab-31d0-965c8c2dbfd5.htm">
+        <HelpTOCNode Title="Button Property " Url="html/a8355693-a826-56c6-35a1-fd9157b03b6b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ButtonPressedEventHandler Delegate" Url="html/b4ead5c4-c642-e149-6f72-452b21e77a16.htm" />
+    <HelpTOCNode Id="d020d650-f702-4323-aa9f-8f5507a1921b" Title="ButtonTextBoxControl Class" Url="html/07ef7105-8bb1-cf1c-2397-4f8c892b1013.htm">
+      <HelpTOCNode Title="ButtonTextBoxControl Constructor " Url="html/8dba26df-0acf-734d-8d85-139d3ee4cede.htm" />
+      <HelpTOCNode Id="7a5c3f42-ede6-4e3a-b347-ac8fc8c4042b" Title="ButtonTextBoxControl Properties" Url="html/af8159cc-e4bf-c00e-5a45-369b6aa42d45.htm">
+        <HelpTOCNode Title="Buttons Property " Url="html/46669446-9842-f59f-230b-bd3d969d36d6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="07ca2e55-d689-4160-a9b2-e9256b1cc00a" Title="ButtonTextBoxControl Events" Url="html/1d681bc6-a45a-d96d-468f-45b7bde01aca.htm">
+        <HelpTOCNode Title="ButtonClick Event" Url="html/ac66b6aa-e434-8d33-0fb8-1209abc81d74.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0024439e-1c0a-4bd5-b2ff-74d2da62eb4c" Title="EditorButton Class" Url="html/476ed614-c272-e677-1765-ed56479f55bd.htm">
+      <HelpTOCNode Id="a50b818d-9ad4-4a23-8704-c3f91c763c1e" Title="EditorButton Constructor " Url="html/324fab15-6b63-1ffc-35d8-614603f1b6ab.htm">
+        <HelpTOCNode Title="EditorButton Constructor " Url="html/92e386fa-ed2b-9138-414c-0cc359bb3a7e.htm" />
+        <HelpTOCNode Title="EditorButton Constructor (ButtonPredefines)" Url="html/db4df122-d116-9a04-3b33-19e824146577.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7c1002b4-fb71-4352-82bc-5cb22e2e7faf" Title="EditorButton Properties" Url="html/af2e51c1-18e1-1f8c-3d50-2a8b6a7d391d.htm">
+        <HelpTOCNode Title="Caption Property " Url="html/4c3be27a-6c6f-a1c0-6966-29144844f9ed.htm" />
+        <HelpTOCNode Title="Cursor Property " Url="html/72b5675f-0873-d921-baf8-a7c92ac76bc8.htm" />
+        <HelpTOCNode Title="Enabled Property " Url="html/c161bd7b-81e2-5ba9-f7e6-a80f0660f06d.htm" />
+        <HelpTOCNode Title="Image Property " Url="html/8319a244-eca5-8c97-7fe9-351b397f6ebe.htm" />
+        <HelpTOCNode Title="ImageAlign Property " Url="html/ea72a19f-2eae-0abf-4287-f278b930c393.htm" />
+        <HelpTOCNode Title="IsLeft Property " Url="html/238f0b8e-54f8-976c-746a-5a6e86153670.htm" />
+        <HelpTOCNode Title="Kind Property " Url="html/2e281778-2253-dbcb-04b3-a52f592a2ff9.htm" />
+        <HelpTOCNode Title="Shortcut Property " Url="html/b392448e-399a-8d7b-7780-f8716e4e785a.htm" />
+        <HelpTOCNode Title="ToolTip Property " Url="html/12273374-d456-0dd7-511f-825cd5a6aa84.htm" />
+        <HelpTOCNode Title="Visible Property " Url="html/0c0a8b1c-b361-cff9-5282-e54c2744bd71.htm" />
+        <HelpTOCNode Title="Width Property " Url="html/52fd4069-0963-b8d1-96e7-3af1c92b6ed4.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a45526ff-64c1-4ebb-9dfd-db3af80f669f" Title="EditorButton Methods" Url="html/4a5a574e-e573-5eaa-0010-1bcbd89c237a.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/67d40f8f-c0bb-d11d-023e-91c38d57c761.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9e6fc4f2-424b-4d7a-bd31-e71aa38a309a" Title="EditorButton Events" Url="html/173a4697-1eaf-b831-ef32-59a67f442a0c.htm">
+        <HelpTOCNode Title="PropertyChanged Event" Url="html/47ec9dad-e84d-107f-5b3f-ac28ee4ab132.htm" />
+        <HelpTOCNode Title="PropertyChanging Event" Url="html/06c3b240-8ced-2887-4507-adc3c0eaec96.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2e5f8183-c5cc-4662-ad33-0cc6b518c227" Title="EditorButtonCollection Class" Url="html/07f816df-7c76-3afe-226a-3ed6d27ee719.htm">
+      <HelpTOCNode Title="EditorButtonCollection Constructor " Url="html/12872490-876e-d1d7-9dc2-30882f3ea0a5.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="b3785592-9c81-4835-8018-bb1265700868" Title="PropertyChangedEventArgsEx Class" Url="html/407217f2-a227-9777-d093-e4929796f737.htm">
+      <HelpTOCNode Title="PropertyChangedEventArgsEx Constructor " Url="html/b101cf13-8e53-76a3-9aab-e167d162666e.htm" />
+      <HelpTOCNode Id="b7c2006a-2bf2-46e8-844a-9e9b0d0da0df" Title="PropertyChangedEventArgsEx Properties" Url="html/7d6dbd0c-7a4b-5e4f-e716-7a44c0cc10d5.htm">
+        <HelpTOCNode Title="NewValue Property " Url="html/a706a383-dd8c-b698-7e3c-91f4c0a1f821.htm" />
+        <HelpTOCNode Title="OldValue Property " Url="html/bfb41349-6b8d-0e6a-57d4-ea9b3989c5d8.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8e407989-f779-4a57-93ad-b1aeef87d5dc" Title="PropertyChangingEventArgsEx Class" Url="html/9c9d0284-b8a4-ea49-0cbb-d8f984db9861.htm">
+      <HelpTOCNode Title="PropertyChangingEventArgsEx Constructor " Url="html/ce04bace-a309-37ca-e3a2-dc88f250bfd6.htm" />
+      <HelpTOCNode Id="30985c64-4529-441b-a1d0-a044a06d4bfd" Title="PropertyChangingEventArgsEx Properties" Url="html/38819e4e-fd5f-c30f-c1ee-bb173bf5dfb3.htm">
+        <HelpTOCNode Title="Cancel Property " Url="html/371dc866-9e4d-a886-7f22-e5450a2f9245.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="beb02e32-fed3-4034-a834-f78b36d90eaa" Title="SplitContainerControl Class" Url="html/95ed422c-755a-e345-36e5-e77ca730514f.htm">
+      <HelpTOCNode Title="SplitContainerControl Constructor " Url="html/6d7d3dac-eaa8-4e72-e6b3-1bfd2e1b883a.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

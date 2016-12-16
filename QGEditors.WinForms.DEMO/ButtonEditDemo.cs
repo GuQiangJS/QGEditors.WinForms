@@ -19,6 +19,8 @@ namespace QGEditors.WinForms.DEMO
             InitializeComponent();
 
             this.buttonEditAppearance1.DataSource = this.buttonEdit1.Buttons[0];
+            this.buttonEditAppearance2.DataSource = this.buttonEdit1.Buttons[1];
+            this.buttonEditAppearance3.DataSource = this.buttonEdit1.Buttons[2];
 
             this.buttonEdit1.ButtonClick += buttonEdit1_ButtonClick;
         }

@@ -13,13 +13,20 @@ using System.Windows.Forms;
 
 namespace QGEditors.WinForms
 {
+    /// <summary>
+    /// 表示一个支持内置按钮的控件，该控件可用于显示或编辑无格式文本。
+    /// </summary>
+    [DefaultProperty("Buttons")]
     [DefaultEvent("ButtonClick")]
-    public class ButtonEdit : TextBox
+    public class ButtonTextBoxControl : TextBox
     {
         #region Fields
 
         private static readonly object buttonClick = new object();
         private static bool _setLocalAndSize = false;
+        /// <summary>
+        /// 按钮集合
+        /// </summary>
         private EditorButtonCollection _buttons = new EditorButtonCollection();
         private ToolTip _buttonTip = new ToolTip();
         private Dictionary<Button, EditorButton> _innerButtons = new Dictionary<Button, EditorButton>();
@@ -28,7 +35,10 @@ namespace QGEditors.WinForms
 
         #region Constructors
 
-        public ButtonEdit()
+        /// <summary>
+        /// 初始化 <see cref="QGEditors.WinForms.ButtonTextBoxControl"/>  类的新实例。
+        /// </summary>
+        public ButtonTextBoxControl()
         {
             this.Buttons.CollectionChanged += Buttons_CollectionChanged;
 
@@ -39,6 +49,9 @@ namespace QGEditors.WinForms
 
         #region Events
 
+        /// <summary>
+        /// 当单击一个按钮编辑器按钮时发生。
+        /// </summary>
         public event ButtonPressedEventHandler ButtonClick
         {
             add
@@ -55,6 +68,9 @@ namespace QGEditors.WinForms
 
         #region Properties
 
+        /// <summary>
+        /// 获取当前编辑器中的按钮的集合。
+        /// </summary>
         [Browsable(true)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         public EditorButtonCollection Buttons
@@ -69,6 +85,7 @@ namespace QGEditors.WinForms
 
         #region Methods
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
         protected internal virtual void RaiseButtonClick(ButtonPressedEventArgs e)
         {
             ButtonPressedEventHandler handler = (ButtonPressedEventHandler)base.Events[buttonClick];
@@ -78,6 +95,7 @@ namespace QGEditors.WinForms
             }
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]
         protected virtual object GetEventSender()
         {
             if (this.Parent != null)
@@ -214,6 +232,7 @@ namespace QGEditors.WinForms
             CreateButtons();
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:丢失范围之前释放对象")]
         private void CreateButtons()
         {
             this.Controls.Clear();
@@ -252,7 +271,7 @@ namespace QGEditors.WinForms
             }
             foreach (KeyValuePair<Button, EditorButton> kv in this._innerButtons)
             {
-                if (ButtonEdit.Equals(kv.Value, button))
+                if (ButtonTextBoxControl.Equals(kv.Value, button))
                 {
                     return kv.Key;
                 }
@@ -272,7 +291,7 @@ namespace QGEditors.WinForms
             return null;
         }
 
-        private Rectangle GetTextRectangle(Button btn, EditorButton editorBtn)
+        private static Rectangle GetTextRectangle(Button btn, EditorButton editorBtn)
         {
             //图片左右偏移量
             int imageMargin = 1;

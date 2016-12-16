@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace QGEditors.WinForms
 {
-    public static class EditorButtonHelper
+    internal static class EditorButtonHelper
     {
         #region Methods
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:验证公共方法的参数", MessageId = "0")]
-        public static Image GetImage(this EditorButton button)
+        internal static Image GetImage(this EditorButton button)
         {
             if (button.Kind == ButtonPredefines.Glyph)
             {
@@ -29,41 +29,41 @@ namespace QGEditors.WinForms
         #endregion
     }
 
-    public static class ButtonHelper
+    internal static class ControlHelper
     {
 
-        public static Point GetImageLocation(this Button btn, ContentAlignment align, Image image)
+        internal static Point GetImageLocation(this Control control, ContentAlignment align, Image image)
         {
-            if (btn != null && image != null)
+            if (control != null && image != null)
             {
                 switch (align)
                 {
                     case ContentAlignment.BottomCenter:
-                        return new Point((btn.ClientSize.Width - image.Width) / 2, btn.ClientSize.Height - image.Height);
+                        return new Point((control.ClientSize.Width - image.Width) / 2, control.ClientSize.Height - image.Height);
 
                     case ContentAlignment.BottomLeft:
-                        return new Point(0, btn.ClientSize.Height - image.Height);
+                        return new Point(0, control.ClientSize.Height - image.Height);
 
                     case ContentAlignment.BottomRight:
-                        return new Point(btn.ClientSize.Width - image.Width, btn.ClientSize.Height - image.Height);
+                        return new Point(control.ClientSize.Width - image.Width, control.ClientSize.Height - image.Height);
 
                     case ContentAlignment.TopCenter:
-                        return new Point((btn.ClientSize.Width - image.Width) / 2, 0);
+                        return new Point((control.ClientSize.Width - image.Width) / 2, 0);
 
                     case ContentAlignment.TopLeft:
                         return new Point(0, 0);
 
                     case ContentAlignment.TopRight:
-                        return new Point(btn.ClientSize.Width - image.Width, 0);
+                        return new Point(control.ClientSize.Width - image.Width, 0);
 
                     case ContentAlignment.MiddleCenter:
-                        return new Point((btn.ClientSize.Width - image.Width) / 2, (btn.ClientSize.Height - image.Height) / 2);
+                        return new Point((control.ClientSize.Width - image.Width) / 2, (control.ClientSize.Height - image.Height) / 2);
 
                     case ContentAlignment.MiddleLeft:
-                        return new Point(0, (btn.ClientSize.Height - image.Height) / 2);
+                        return new Point(0, (control.ClientSize.Height - image.Height) / 2);
 
                     case ContentAlignment.MiddleRight:
-                        return new Point(btn.ClientSize.Width - image.Width, (btn.ClientSize.Height - image.Height) / 2);
+                        return new Point(control.ClientSize.Width - image.Width, (control.ClientSize.Height - image.Height) / 2);
                 }
             }
             return new Point(0, 0);

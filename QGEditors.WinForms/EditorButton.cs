@@ -16,6 +16,9 @@ using QGEditors.WinForms.Properties;
 
 namespace QGEditors.WinForms
 {
+    /// <summary>
+    /// 表示 <see cref="QGEditors.WinForms.ButtonTextBoxControl"/> 控件或后代中显示的单个编辑器按钮。
+    /// </summary>
     [ComVisible(false)]
     [ToolboxItem(false)]
     [DefaultProperty("Kind")]
@@ -23,17 +26,53 @@ namespace QGEditors.WinForms
     {
         #region Fields
 
-        private static Font _defButtonFont = new Button().Font;
-        private static Graphics _defButtonGraphics = new Button().CreateGraphics();
+        /// <summary>
+        /// 默认的按钮字体
+        /// </summary>
+        private static Font _defButtonFont;
+        /// <summary>
+        /// 默认的按钮绘图器
+        /// </summary>
+        private static Graphics _defButtonGraphics;
+        /// <summary>
+        /// 标题
+        /// </summary>
         private string _caption = "";
+        /// <summary>
+        /// 标题尺寸矩形大小（根据Caption属性计算）
+        /// </summary>
         private SizeF _captionSize;
+        /// <summary>
+        /// 鼠标指针图像
+        /// </summary>
         private Cursor _cursor = Cursors.Default;
+        /// <summary>
+        /// 默认宽度
+        /// </summary>
         private int _defaultWidth = 19;
+        /// <summary>
+        /// 是否可用
+        /// </summary>
         private bool _enable = true;
+        /// <summary>
+        /// 图像
+        /// </summary>
         private Image _image = null;
+        /// <summary>
+        /// 图像对其方式
+        /// </summary>
         private ContentAlignment _imageAlign = ContentAlignment.MiddleCenter;
+        /// <summary>
+        /// 图像相等比较器
+        /// </summary>
         private ImageComparer _imageComparer = new ImageComparer();
+        /// <summary>
+        /// 按钮是否放在左侧
+        /// </summary>
         private bool _isLeft = false;
+        /// <summary>
+        /// 按钮类型
+        /// </summary>
         private ButtonPredefines _kind = ButtonPredefines.Elipsis;
 
         private Image[] _presetImages ={Resources.Backward,Resources.Delete,Resources.Delete,Resources.Down,
@@ -51,10 +90,34 @@ namespace QGEditors.WinForms
 
         #region Constructors
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
+        static EditorButton()
+        {
+            Button btn = null;
+            try
+            {
+                btn = new Button();
+                _defButtonFont = btn.Font;
+                _defButtonGraphics = btn.CreateGraphics();
+            }
+            finally
+            {
+                btn.Dispose();
+                btn = null;
+            }
+        }
+
+        /// <summary>
+        /// 初始化 <see cref="QGEditors.WinForms.EditorButton"/>  类的新实例。
+        /// </summary>
         public EditorButton()
         {
         }
 
+        /// <summary>
+        /// 使用预置的按钮类型，初始化 <see cref="QGEditors.WinForms.EditorButton"/>  类的新实例。
+        /// </summary>
+        /// <param name="kind">预置的按钮类型</param>
         public EditorButton(ButtonPredefines kind)
             : this()
         {
@@ -65,14 +128,29 @@ namespace QGEditors.WinForms
 
         #region Events
 
+        /// <summary>
+        /// 在某一属性值已更改时发生。
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// 在某个属性值将更改时发生。
+        /// </summary>
         public event PropertyChangingEventHandler PropertyChanging;
 
         #endregion
 
         #region Properties
 
+        /// <summary>
+        /// 获取或设置与当前按钮关联的文本。
+        /// </summary>
+        /// <remarks>
+        /// <see cref="EditorButton.Width"/>会根据文本长度变化。
+        /// </remarks>
+        /// <value>
+        /// 与此编辑器按钮关联的文本。
+        /// </value>
         [DefaultValue("")]
         [Localizable(true)]
         public virtual string Caption
@@ -94,7 +172,15 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置当鼠标指针位于当前按钮上时显示的光标。
+        /// </summary>
+        /// <value>
+        /// 一个 <see cref="System.Windows.Forms.Cursor"/>，表示当鼠标指针位于控件上时显示的光标。
+        /// 默认值 <see cref="Cursors.Default"/>
+        /// </value>
         [DefaultValue(typeof(Cursor), "Default")]
+        [Localizable(true)]
         public virtual Cursor Cursor
         {
             get
@@ -112,7 +198,14 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置一个值，该值指示当前按钮是否可以对用户交互作出响应。
+        /// </summary>
+        /// <value>
+        /// 如果控件可以对用户交互作出响应，则为 <c>true</c>；否则为 <c>false</c>。 默认值为 <c>true</c>。
+        /// </value>
         [DefaultValue(true)]
+        [Localizable(true)]
         public virtual bool Enabled
         {
             get
@@ -130,7 +223,18 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置显示在当前按钮上的图像。
+        /// </summary>
+        /// <remarks>
+        /// 如果 <see cref="System.Drawing.Image"/> 不存在于 <see cref="ButtonPredefines"/> 提供的预设集合中
+        /// ，则 <see cref="EditorButton.Kind"/> 属性会被置为 <see cref="ButtonPredefines.Glyph"/>。
+        /// </remarks>
+        /// <value>
+        /// 默认值为 <c>null</c>。
+        /// </value>
         [DefaultValue((string)null)]
+        [Localizable(true)]
         public virtual Image Image
         {
             get
@@ -152,7 +256,14 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置当前按钮上的图像对齐方式。
+        /// </summary>
+        /// <value>
+        /// <see cref="System.Drawing.ContentAlignment"/> 值之一。 默认值为 <see cref="ContentAlignment.MiddleCenter"/>。
+        /// </value>
         [DefaultValue(32)]
+        [Localizable(true)]
         public virtual ContentAlignment ImageAlign
         {
             get
@@ -170,7 +281,15 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置当前按钮的位置。
+        /// </summary>
+        /// <value>
+        /// 如果为 <c>true</c> 那么编辑器按钮会从父级控件的左侧开始绘制，反之则从从父级控件的右侧开始绘制。
+        /// 默认值为 <c>false</c>。
+        /// </value>
         [DefaultValue(false)]
+        [Localizable(true)]
         public virtual bool IsLeft
         {
             get
@@ -188,7 +307,15 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置要在当前按钮中预设的图像类型。
+        /// </summary>
+        /// <remarks>
+        /// 默认为 <see cref="ButtonPredefines.Elipsis"/> 。
+        /// 修改为 <see cref="ButtonPredefines.Glyph"/> 后会根据 <see cref="EditorButton.Image"/> 属性和 <see cref="EditorButton.Caption"/> 属性显示内容。
+        /// </remarks>
         [DefaultValue(1)]
+        [Localizable(true)]
         public virtual ButtonPredefines Kind
         {
             get
@@ -206,10 +333,20 @@ namespace QGEditors.WinForms
             }
         }
 
-        //TODO
+        /// <summary>
+        /// 获取或设置用于激活当前按钮功能的快捷方式。
+        /// </summary>
+        /// <remarks>
+        /// <see cref="TextBoxBase.ShortcutsEnabled"/> 属性指示该快捷方式是否可用。
+        /// </remarks>
+        /// <value>默认值 <see cref="Keys.None"/> 。</value>
         [DefaultValue(0)]
+        [Localizable(true)]
         public virtual Keys Shortcut { get; set; }
 
+        /// <summary>
+        /// 获取或设置为在此元素显示的工具提示对象 用户界面 (UI)。
+        /// </summary>
         [DefaultValue("")]
         [Localizable(true)]
         public virtual string ToolTip
@@ -229,7 +366,12 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置一个值，该值指示是否显示当前按钮。
+        /// </summary>
+        /// <value>默认值 <c>true</c> 。</value>
         [DefaultValue(true)]
+        [Localizable(true)]
         public virtual bool Visible
         {
             get
@@ -247,7 +389,12 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置当前按钮的宽度。
+        /// </summary>
+        /// <value>默认值 19 。</value>
         [DefaultValue(19)]
+        [Localizable(true)]
         public virtual int Width
         {
             get
@@ -287,11 +434,16 @@ namespace QGEditors.WinForms
 
         #region Methods
 
+        /// <summary>
+        /// 返回的字符串表示形式 <see cref="EditorButton"/> 对象。
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return ObjectHelper.GetObjectText(this);
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
         protected internal virtual void RaisePropertyChanged<T>(string propertyName, T oldValue, T newValue)
         {
             if (this.PropertyChanged != null)
@@ -301,6 +453,7 @@ namespace QGEditors.WinForms
             }
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
         protected internal virtual bool RaisePropertyChanging(string propertyName)
         {
             if (this.PropertyChanging != null)
@@ -358,6 +511,7 @@ namespace QGEditors.WinForms
                 }
             }
 
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:验证公共方法的参数", MessageId = "0")]
             public int GetHashCode(Image obj)
             {
                 return obj.GetHashCode();

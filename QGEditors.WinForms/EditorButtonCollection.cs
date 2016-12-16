@@ -8,6 +8,9 @@ using System.Collections.ObjectModel;
 
 namespace QGEditors.WinForms
 {
+    /// <summary>
+    /// <see cref="EditorButton"/> 集合类型对象。
+    /// </summary>
     public class EditorButtonCollection : ObservableCollection<EditorButton>
     {
     }
