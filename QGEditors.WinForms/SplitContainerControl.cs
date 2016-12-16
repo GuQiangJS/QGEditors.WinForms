@@ -1,4 +1,10 @@
-﻿using System.Collections.Generic;
+﻿/*
+ *  QGEditor
+ *  Copyright (c) 2014-2016 GuQiang - <guqiangjs@gmail.com>
+ *  ALL RIGHTS RESERVED
+*/
+
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,14 +14,17 @@ namespace QGEditors.WinForms
     {
         #region Fields
 
-        //最大高度或最大宽度（根据Orientation属性确定）
-        private const int _MAX = 15;
-        //间隔宽度
-        private const int _SPACING = 3;
-        //绘图宽度
-        private const int _WIDTH = 1;
         //绘图高度
         private const int _HEIGHT = 1;
+
+        //最大高度或最大宽度（根据Orientation属性确定）
+        private const int _MAX = 15;
+
+        //间隔宽度
+        private const int _SPACING = 3;
+
+        //绘图宽度
+        private const int _WIDTH = 1;
 
         #endregion
 
@@ -23,6 +32,11 @@ namespace QGEditors.WinForms
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            if (e == null || e.ClipRectangle == null || e.Graphics == null)
+            {
+                return;
+            }
+
             Point mousePoint = this.PointToClient(Control.MousePosition);
 
             Pen pen = SystemPens.ControlDark;

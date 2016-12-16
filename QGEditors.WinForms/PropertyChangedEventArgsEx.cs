@@ -1,15 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ *  QGEditor
+ *  Copyright (c) 2014-2016 GuQiang - <guqiangjs@gmail.com>
+ *  ALL RIGHTS RESERVED
+*/
+
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 
 namespace QGEditors.WinForms
 {
     public class PropertyChangedEventArgsEx : PropertyChangedEventArgs
     {
+        #region Fields
+
         private readonly object newValue;
         private readonly object oldValue;
+
+        #endregion
+
+        #region Constructors
 
         public PropertyChangedEventArgsEx(string propertyName, object oldValue, object newValue)
             : base(propertyName)
@@ -17,6 +25,10 @@ namespace QGEditors.WinForms
             this.oldValue = oldValue;
             this.newValue = newValue;
         }
+
+        #endregion
+
+        #region Properties
 
         public object NewValue
         {
@@ -33,8 +45,7 @@ namespace QGEditors.WinForms
                 return this.oldValue;
             }
         }
+
+        #endregion
     }
-
- 
-
 }

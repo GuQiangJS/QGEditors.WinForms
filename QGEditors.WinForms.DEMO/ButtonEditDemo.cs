@@ -12,45 +12,31 @@ namespace QGEditors.WinForms.DEMO
 {
     public partial class ButtonEditDemo : Form
     {
+        #region Constructors
+
         public ButtonEditDemo()
         {
             InitializeComponent();
 
-            EditorButton btn1=new EditorButton(ButtonPredefines.Plus);
-            btn1.Shortcut = Keys.F10;
+            this.buttonEditAppearance1.DataSource = this.buttonEdit1.Buttons[0];
 
-            this.buttonEdit1.Buttons.Add(btn1);
-
-            EditorButton btn2 = new EditorButton();
-            this.buttonEdit1.Buttons.Add(btn2);
-
-            EditorButton btn3 = new EditorButton(ButtonPredefines.Glyph);
-            btn3.Caption = "ABC";
-            this.buttonEdit1.Buttons.Add(btn3);
-
-            EditorButton btn4 = new EditorButton(ButtonPredefines.Undo);
-            btn4.IsLeft = true;
-            this.buttonEdit1.Buttons.Add(btn4);
-
-            this.buttonEdit1.Text = "Sample Button Edit";
-
-            this.buttonEdit1.KeyUp += buttonEdit1_KeyUp;
-
-            this.appearance1.DataSource = btn1;
-            this.appearance2.DataSource = btn2;
-            this.appearance3.DataSource = btn3;
-            this.appearance4.DataSource = btn4;
+            this.buttonEdit1.ButtonClick += buttonEdit1_ButtonClick;
         }
 
-        void buttonEdit1_KeyUp(object sender, KeyEventArgs e)
+        #endregion
+
+        #region Methods
+
+        void buttonEdit1_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            //this.richTextBox1.Text = string.Format("{0}{1}{2} KeyUp.", this.richTextBox1.Text, Environment.NewLine, e.KeyCode);
-            //e.Handled = true;
+            if (this.richTextBox1.TextLength > 0)
+            {
+                this.richTextBox1.AppendText(System.Environment.NewLine);
+            }
+            string str = ObjectHelper.GetObjectText(e.Button);
+            this.richTextBox1.AppendText(string.Format("Button {0} Click",(string.IsNullOrEmpty(str) ? e.Button.Kind.ToString() : str)));
         }
 
-        private void buttonEdit1_ButtonClick(object sender, ButtonPressedEventArgs e)
-        {
-            //this.richTextBox1.Text = string.Format("{0}{1}{2} Click Kind:{3}.", this.richTextBox1.Text, Environment.NewLine, e.Button,e.Button.Kind);
-        }
+        #endregion
     }
 }

@@ -1,19 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿/*
+ *  QGEditor
+ *  Copyright (c) 2014-2016 GuQiang - <guqiangjs@gmail.com>
+ *  ALL RIGHTS RESERVED
+*/
+
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 
 namespace QGEditors.WinForms
 {
     public class PropertyChangingEventArgsEx : PropertyChangingEventArgs
     {
+        #region Fields
+
         private bool cancel;
+
+        #endregion
+
+        #region Constructors
 
         public PropertyChangingEventArgsEx(string propertyName)
             : base(propertyName)
         {
         }
+
+        #endregion
+
+        #region Properties
 
         public bool Cancel
         {
@@ -26,7 +38,7 @@ namespace QGEditors.WinForms
                 this.cancel = value;
             }
         }
+
+        #endregion
     }
-
-
 }

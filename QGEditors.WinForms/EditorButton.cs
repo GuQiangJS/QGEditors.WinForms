@@ -1,49 +1,53 @@
 ﻿/*
- *  Puzzle System Library
+ *  QGEditor
  *  Copyright (c) 2014-2016 GuQiang - <guqiangjs@gmail.com>
  *  ALL RIGHTS RESERVED
 */
 
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using QGEditors.WinForms.Properties;
-using System.Collections.Generic;
-using System.IO;
 
 namespace QGEditors.WinForms
 {
     [ComVisible(false)]
-    public class EditorButton : Component, INotifyPropertyChanged, INotifyPropertyChanging
+    [ToolboxItem(false)]
+    [DefaultProperty("Kind")]
+    public class EditorButton : INotifyPropertyChanged, INotifyPropertyChanging
     {
         #region Fields
-        
-        private bool _isLeft=false;
+
+        private static Font _defButtonFont = new Button().Font;
+        private static Graphics _defButtonGraphics = new Button().CreateGraphics();
         private string _caption = "";
-        private string _tooltip = "";
+        private SizeF _captionSize;
         private Cursor _cursor = Cursors.Default;
+        private int _defaultWidth = 19;
         private bool _enable = true;
         private Image _image = null;
         private ContentAlignment _imageAlign = ContentAlignment.MiddleCenter;
+        private ImageComparer _imageComparer = new ImageComparer();
+        private bool _isLeft = false;
         private ButtonPredefines _kind = ButtonPredefines.Elipsis;
-        private bool _visible = true;
-        private int _width = 19;
-        private int _defaultWidth = 19;
+
         private Image[] _presetImages ={Resources.Backward,Resources.Delete,Resources.Delete,Resources.Down,
                                       Resources.Edit,Resources.Elipsis,Resources.Favorite,Resources.Forward,
                                       Resources.Help,Resources.Left,Resources.Loop,Resources.Minus,
                                       Resources.OK,Resources.Option,Resources.Pause,Resources.Play,
                                       Resources.Plus,Resources.Redo,Resources.Right,Resources.Search,
                                       Resources.Trash,Resources.Undo,Resources.Up};
-        private ImageComparer _imageComparer = new ImageComparer();
+
+        private string _tooltip = "";
+        private bool _visible = true;
+        private int _width = 19;
 
         #endregion
-
-        private static Graphics _defButtonGraphics = new Button().CreateGraphics();
-        private static Font _defButtonFont = new Button().Font;
 
         #region Constructors
 
@@ -70,6 +74,7 @@ namespace QGEditors.WinForms
         #region Properties
 
         [DefaultValue("")]
+        [Localizable(true)]
         public virtual string Caption
         {
             get
@@ -82,31 +87,14 @@ namespace QGEditors.WinForms
                 {
                     string cap = this.Caption;
                     this._caption = value;
-                    this._captionSize = GetTextSize(value);
+                    this._captionSize = value.GetTextSize(_defButtonGraphics, _defButtonFont);
                     this.Width = Convert.ToInt32(Math.Round(this._captionSize.Width));
                     this.RaisePropertyChanged<string>("Caption", cap, value);
                 }
             }
         }
 
-        [DefaultValue("")]
-        public virtual string ToolTip
-        {
-            get
-            {
-                return _tooltip;
-            }
-            set
-            {
-                if (!string.Equals(this._tooltip, value) && this.RaisePropertyChanging("ToolTip"))
-                {
-                    string tip = this.ToolTip;
-                    this._tooltip = value;
-                    this.RaisePropertyChanged<string>("ToolTip", tip, value);
-                }
-            }
-        }
-
+        [DefaultValue(typeof(Cursor), "Default")]
         public virtual Cursor Cursor
         {
             get
@@ -147,10 +135,6 @@ namespace QGEditors.WinForms
         {
             get
             {
-                if (_image == null && Kind != ButtonPredefines.Glyph)
-                {
-                    return GetImageByKind();
-                }
                 return _image;
             }
             set
@@ -186,6 +170,24 @@ namespace QGEditors.WinForms
             }
         }
 
+        [DefaultValue(false)]
+        public virtual bool IsLeft
+        {
+            get
+            {
+                return _isLeft;
+            }
+            set
+            {
+                if (!bool.Equals(this._isLeft, value) && this.RaisePropertyChanging("IsLeft"))
+                {
+                    bool isLeft = this.IsLeft;
+                    this._isLeft = value;
+                    this.RaisePropertyChanged<bool>("IsLeft", isLeft, value);
+                }
+            }
+        }
+
         [DefaultValue(1)]
         public virtual ButtonPredefines Kind
         {
@@ -199,14 +201,33 @@ namespace QGEditors.WinForms
                 {
                     ButtonPredefines kind = this.Kind;
                     this._kind = value;
-                    this.Image = GetImageByKind();
                     this.RaisePropertyChanged<ButtonPredefines>("Kind", kind, value);
                 }
             }
         }
 
-        //TODO:
+        //TODO
+        [DefaultValue(0)]
         public virtual Keys Shortcut { get; set; }
+
+        [DefaultValue("")]
+        [Localizable(true)]
+        public virtual string ToolTip
+        {
+            get
+            {
+                return _tooltip;
+            }
+            set
+            {
+                if (!string.Equals(this._tooltip, value) && this.RaisePropertyChanging("ToolTip"))
+                {
+                    string tip = this.ToolTip;
+                    this._tooltip = value;
+                    this.RaisePropertyChanged<string>("ToolTip", tip, value);
+                }
+            }
+        }
 
         [DefaultValue(true)]
         public virtual bool Visible
@@ -222,33 +243,6 @@ namespace QGEditors.WinForms
                     bool visible = this.Visible;
                     this._visible = value;
                     this.RaisePropertyChanged<bool>("Visible", visible, value);
-                }
-            }
-        }
-
-        private SizeF _captionSize;
-        internal SizeF CaptionSize
-        {
-            get
-            {
-                return _captionSize;
-            }
-        }
-
-        [DefaultValue(false)]
-        public virtual bool IsLeft
-        {
-            get
-            {
-                return _isLeft;
-            }
-            set
-            {
-                if (!bool.Equals(this._isLeft, value) && this.RaisePropertyChanging("IsLeft"))
-                {
-                    bool isLeft = this.IsLeft;
-                    this._isLeft = value;
-                    this.RaisePropertyChanged<bool>("IsLeft", isLeft, value);
                 }
             }
         }
@@ -281,18 +275,21 @@ namespace QGEditors.WinForms
             }
         }
 
+        internal SizeF CaptionSize
+        {
+            get
+            {
+                return _captionSize;
+            }
+        }
+
         #endregion
 
         #region Methods
-        private SizeF GetTextSize(string text)
+
+        public override string ToString()
         {
-            if (!string.IsNullOrEmpty(text))
-            {
-                //单位为mm
-                _defButtonGraphics.PageUnit = GraphicsUnit.Pixel;
-                return _defButtonGraphics.MeasureString(text, _defButtonFont);
-            }
-            return SizeF.Empty;
+            return ObjectHelper.GetObjectText(this);
         }
 
         protected internal virtual void RaisePropertyChanged<T>(string propertyName, T oldValue, T newValue)
@@ -315,11 +312,6 @@ namespace QGEditors.WinForms
             return true;
         }
 
-        private Image GetImageByKind()
-        {
-            return this.Kind.GetImage();
-        }
-
         private void SetKind(ButtonPredefines kind)
         {
             this._kind = kind;
@@ -328,28 +320,42 @@ namespace QGEditors.WinForms
 
         #endregion
 
-        class ImageComparer : IEqualityComparer<Image>
+        #region Classes
+
+        private class ImageComparer : IEqualityComparer<Image>
         {
-            #region IEqualityComparer<Image> 成员
+            #region Methods
 
             public bool Equals(Image x, Image y)
             {
-                MemoryStream ms1 = new MemoryStream();
-                MemoryStream ms2 = new MemoryStream();
-
-                x.Save(ms1, System.Drawing.Imaging.ImageFormat.Bmp);
-                y.Save(ms2, System.Drawing.Imaging.ImageFormat.Bmp);
-                byte[] im1 = ms1.GetBuffer();
-                byte[] im2 = ms2.GetBuffer();
-                if (im1.Length != im2.Length)
-                    return false;
-                else
+                if (x == null && y == null)
                 {
-                    for (int i = 0; i < im1.Length; i++)
-                        if (im1[i] != im2[i])
-                            return false;
+                    return true;
                 }
-                return true;
+                else if (x == null || y == null)
+                {
+                    return false;
+                }
+
+                using (MemoryStream ms1 = new MemoryStream())
+                {
+                    using (MemoryStream ms2 = new MemoryStream())
+                    {
+                        x.Save(ms1, System.Drawing.Imaging.ImageFormat.Bmp);
+                        y.Save(ms2, System.Drawing.Imaging.ImageFormat.Bmp);
+                        byte[] im1 = ms1.GetBuffer();
+                        byte[] im2 = ms2.GetBuffer();
+                        if (im1.Length != im2.Length)
+                            return false;
+                        else
+                        {
+                            for (int i = 0; i < im1.Length; i++)
+                                if (im1[i] != im2[i])
+                                    return false;
+                        }
+                        return true;
+                    }
+                }
             }
 
             public int GetHashCode(Image obj)
@@ -359,5 +365,7 @@ namespace QGEditors.WinForms
 
             #endregion
         }
+
+        #endregion
     }
 }

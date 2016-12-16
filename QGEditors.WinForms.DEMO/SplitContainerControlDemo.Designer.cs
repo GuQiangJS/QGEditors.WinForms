@@ -1,6 +1,6 @@
 ﻿namespace QGEditors.WinForms.DEMO
 {
-    partial class Form1
+    partial class SplitContainerControlDemo
     {
         /// <summary>
         /// Required designer variable.
@@ -38,18 +38,24 @@
             // 
             // splitContainerControl1
             // 
+            this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl1.Name = "splitContainerControl1";
-            this.splitContainerControl1.Size = new System.Drawing.Size(151, 132);
-            this.splitContainerControl1.SplitterDistance = 49;
+            this.splitContainerControl1.Size = new System.Drawing.Size(284, 132);
+            this.splitContainerControl1.SplitterDistance = 92;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // splitContainerControl2
             // 
-            this.splitContainerControl2.Location = new System.Drawing.Point(122, 149);
+            this.splitContainerControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainerControl2.Location = new System.Drawing.Point(0, 138);
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainerControl2.Size = new System.Drawing.Size(150, 100);
+            this.splitContainerControl2.Size = new System.Drawing.Size(284, 125);
+            this.splitContainerControl2.SplitterDistance = 62;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // Form1
