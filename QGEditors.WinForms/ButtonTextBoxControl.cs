@@ -104,6 +104,7 @@ namespace QGEditors.WinForms
             }
             return this;
         }
+   
 
         protected override void OnKeyUp(KeyEventArgs e)
         {
@@ -195,8 +196,16 @@ namespace QGEditors.WinForms
                         Rectangle textRect = GetTextRectangle(btn, editorBtn);
                         if (!textRect.IsEmpty)
                         {
-                            e.Graphics.DrawString(editorBtn.Caption, btn.Font, SystemBrushes.ControlText, GetTextRectangle(btn, editorBtn));
+                            e.Graphics.DrawString(editorBtn.Caption, editorBtn.CaptionFont, SystemBrushes.ControlText, GetTextRectangle(btn, editorBtn));
                         }
+                    }
+                    if (editorBtn.IsLeft)
+                    {
+                        e.Graphics.DrawLine(SystemPens.ActiveBorder, new Point(btn.ClientRectangle.Right - 1, 0), new Point(btn.ClientRectangle.Right - 1, btn.ClientRectangle.Right - 1));
+                    }
+                    else
+                    {
+                        e.Graphics.DrawLine(SystemPens.ActiveBorder, new Point(0, 0), new Point(0, btn.ClientRectangle.Right - 1));
                     }
                 }
             }
@@ -245,8 +254,7 @@ namespace QGEditors.WinForms
                     btn.MouseHover += btn_MouseHover;
                     btn.MouseLeave += btn_MouseLeave;
                     btn.Paint += btn_Paint;
-                    btn.Padding = new Padding(0);
-                    btn.Margin = new Padding(0);
+                    btn.Padding = btn.Margin = new Padding(0);
                     SyncEditorButtonProperties(editorButton, btn);
                     SetButtonFlat(btn);
                     btn.SizeChanged += (o, e) => OnResize(e);
@@ -295,11 +303,12 @@ namespace QGEditors.WinForms
         {
             //图片左右偏移量
             int imageMargin = 1;
-            int textTopMargin = 1;
+            //文字高度偏移量
+            int textTopMargin = 0;
 
             int width = Convert.ToInt32(Math.Round(editorBtn.CaptionSize.Width));
             int height = Convert.ToInt32(Math.Round(editorBtn.CaptionSize.Height));
-            //文字高度+1偏移量
+            
             int top = ((btn.ClientSize.Height - height) / 2) + textTopMargin;
             int left = (btn.ClientSize.Width - width) / 2;
 
@@ -356,7 +365,7 @@ namespace QGEditors.WinForms
             {
                 btn.FlatStyle = FlatStyle.Flat;
                 btn.FlatAppearance.BorderSize = 0;
-                btn.FlatAppearance.MouseOverBackColor = SystemColors.GradientInactiveCaption;
+                btn.FlatAppearance.MouseOverBackColor = Color.BlanchedAlmond;
             }
         }
 
@@ -388,8 +397,8 @@ namespace QGEditors.WinForms
                     leftStartLeft = btns[i].Width;
                 }
             }
-            UnsafeNativeMethods.SendMessage(this.Handle, UnsafeNativeMethods.EM_SETMARGINS, (IntPtr)UnsafeNativeMethods.EC_RIGHTMARGIN, (IntPtr)(width * 0x10000));
-            UnsafeNativeMethods.SendMessage(this.Handle, UnsafeNativeMethods.EM_SETMARGINS, (IntPtr)UnsafeNativeMethods.EC_LEFTMARGIN, (IntPtr)(leftStartLeft & 0xFFFF));
+            UnsafeNativeMethods.SendMessage(this.Handle, UnsafeNativeMethods.EM_SETMARGINS, (IntPtr)UnsafeNativeMethods.EC_RIGHTMARGIN, (IntPtr)((width+1) * 0x10000));
+            UnsafeNativeMethods.SendMessage(this.Handle, UnsafeNativeMethods.EM_SETMARGINS, (IntPtr)UnsafeNativeMethods.EC_LEFTMARGIN, (IntPtr)((leftStartLeft+1) & 0xFFFF));
 
             _setLocalAndSize = false;
         }

@@ -39,6 +39,10 @@ namespace QGEditors.WinForms
         /// </summary>
         private string _caption = "";
         /// <summary>
+        /// 标题字体
+        /// </summary>
+        private Font _captionFont = Control.DefaultFont;
+        /// <summary>
         /// 标题尺寸矩形大小（根据Caption属性计算）
         /// </summary>
         private SizeF _captionSize;
@@ -143,15 +147,40 @@ namespace QGEditors.WinForms
         #region Properties
 
         /// <summary>
-        /// 获取或设置与当前按钮关联的文本。
+        /// 获取或设置与当前按钮关联的文本的字体。
         /// </summary>
-        /// <remarks>
-        /// <see cref="EditorButton.Width"/>会根据文本长度变化。
-        /// </remarks>
         /// <value>
-        /// 与此编辑器按钮关联的文本。
+        /// 要应用于由控件显示的文本的 <see cref="Font"/>。默认为 <see cref="Control.DefaultFont"/> 属性的值。
         /// </value>
-        [DefaultValue("")]
+        [DefaultValue(typeof(Font), "DefaultFont")]
+        [Localizable(true)]
+        public virtual Font CaptionFont
+        {
+            get
+            {
+                return _captionFont;
+            }
+            set
+            {
+                if (!string.Equals(this._captionFont, value) && this.RaisePropertyChanging("CaptionFont"))
+                {
+                    Font capFont = this.CaptionFont;
+                    this._captionFont = value;
+                    this.RaisePropertyChanged<Font>("CaptionFont", capFont, value);
+                }
+            }
+        }
+
+            /// <summary>
+            /// 获取或设置与当前按钮关联的文本。
+            /// </summary>
+            /// <remarks>
+            /// <see cref="EditorButton.Width"/>会根据文本长度变化。
+            /// </remarks>
+            /// <value>
+            /// 与此编辑器按钮关联的文本。
+            /// </value>
+            [DefaultValue("")]
         [Localizable(true)]
         public virtual string Caption
         {
