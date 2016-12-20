@@ -132,6 +132,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo f | xcopy /y "$(TargetPath)" "$(SolutionDir)QGEditors.Output.WinForms.Demo\$(TargetFileName)"
+echo f | xcopy /y "$(TargetDir)QGEditors.WinForms.dll" "$(SolutionDir)QGEditors.Output.WinForms.Demo\QGEditors.WinForms.dll"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

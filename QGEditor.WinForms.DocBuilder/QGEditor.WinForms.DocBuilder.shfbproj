@@ -14,8 +14,8 @@
     <Name>QGEditor.WinForms.DocBuilder</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
-    <OutputPath>Help\</OutputPath>
-    <HtmlHelpName>QGEditor.WinForms  Helper</HtmlHelpName>
+    <OutputPath>..\QGEditors.Output.Doc\</OutputPath>
+    <HtmlHelpName>QGEditor.WinForms Helper</HtmlHelpName>
     <Language>zh-CN</Language>
     <TransformComponentArguments>
       <Argument Key="logoFile" Value="Help.png" xmlns="" />
@@ -28,7 +28,7 @@
     </TransformComponentArguments>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
     <IndentHtml>False</IndentHtml>
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
