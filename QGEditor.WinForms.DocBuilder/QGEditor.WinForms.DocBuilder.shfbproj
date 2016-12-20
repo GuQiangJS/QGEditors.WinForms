@@ -47,8 +47,8 @@
     <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, TypeParameter, AutoDocumentDispose</MissingTags>
     <WorkingPath>WorkPath\</WorkingPath>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\QGEditors.WinForms\bin\Release\QGEditors.WinForms.dll" xmlns="" />
-      <DocumentationSource sourceFile="..\QGEditors.WinForms\bin\Release\QGEditors.WinForms.xml" xmlns="" />
+      <DocumentationSource sourceFile="..\QGEditors.Output.Release\QGEditors.WinForms.dll" />
+      <DocumentationSource sourceFile="..\QGEditors.Output.Release\QGEditors.WinForms.xml" />
     </DocumentationSources>
     <VisibleItems>InheritedMembers</VisibleItems>
   </PropertyGroup>
