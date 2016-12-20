@@ -39,10 +39,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.buttonEditAppearance1 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.buttonEditAppearance2 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.buttonEditAppearance1 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
+            this.buttonEditAppearance2 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
             this.buttonEditAppearance3 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -116,7 +116,6 @@
             this.buttonEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             editorButton1.CaptionFont = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            editorButton2.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             editorButton2.IsLeft = true;
             editorButton2.Kind = QGEditors.WinForms.ButtonPredefines.Undo;
             editorButton3.Caption = "ABC";
@@ -166,15 +165,6 @@
             this.tabPage1.Text = "Button #1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // buttonEditAppearance1
-            // 
-            this.buttonEditAppearance1.DataSource = null;
-            this.buttonEditAppearance1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditAppearance1.Location = new System.Drawing.Point(3, 3);
-            this.buttonEditAppearance1.Name = "buttonEditAppearance1";
-            this.buttonEditAppearance1.Size = new System.Drawing.Size(223, 290);
-            this.buttonEditAppearance1.TabIndex = 0;
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.buttonEditAppearance2);
@@ -185,15 +175,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Button #2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditAppearance2
-            // 
-            this.buttonEditAppearance2.DataSource = null;
-            this.buttonEditAppearance2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditAppearance2.Location = new System.Drawing.Point(3, 3);
-            this.buttonEditAppearance2.Name = "buttonEditAppearance2";
-            this.buttonEditAppearance2.Size = new System.Drawing.Size(186, 68);
-            this.buttonEditAppearance2.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -206,13 +187,31 @@
             this.tabPage3.Text = "Button #3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // buttonEditAppearance1
+            // 
+            this.buttonEditAppearance1.DataSource = null;
+            this.buttonEditAppearance1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditAppearance1.Location = new System.Drawing.Point(3, 3);
+            this.buttonEditAppearance1.Name = "buttonEditAppearance1";
+            this.buttonEditAppearance1.Size = new System.Drawing.Size(223, 290);
+            this.buttonEditAppearance1.TabIndex = 0;
+            // 
+            // buttonEditAppearance2
+            // 
+            this.buttonEditAppearance2.DataSource = null;
+            this.buttonEditAppearance2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditAppearance2.Location = new System.Drawing.Point(3, 3);
+            this.buttonEditAppearance2.Name = "buttonEditAppearance2";
+            this.buttonEditAppearance2.Size = new System.Drawing.Size(223, 290);
+            this.buttonEditAppearance2.TabIndex = 0;
+            // 
             // buttonEditAppearance3
             // 
             this.buttonEditAppearance3.DataSource = null;
             this.buttonEditAppearance3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonEditAppearance3.Location = new System.Drawing.Point(3, 3);
             this.buttonEditAppearance3.Name = "buttonEditAppearance3";
-            this.buttonEditAppearance3.Size = new System.Drawing.Size(186, 68);
+            this.buttonEditAppearance3.Size = new System.Drawing.Size(223, 290);
             this.buttonEditAppearance3.TabIndex = 0;
             // 
             // ButtonEditDemo

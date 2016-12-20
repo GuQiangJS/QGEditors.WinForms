@@ -27,53 +27,65 @@ namespace QGEditors.WinForms
         #region Fields
 
         /// <summary>
-        /// 默认的按钮字体
-        /// </summary>
-        private static Font _defButtonFont;
-        /// <summary>
         /// 默认的按钮绘图器
         /// </summary>
         private static Graphics _defButtonGraphics;
+
         /// <summary>
         /// 标题
         /// </summary>
         private string _caption = "";
+
+        /// <summary>
+        /// 标题前景色
+        /// </summary>
+        private Color _captionColor = Control.DefaultForeColor;
+
         /// <summary>
         /// 标题字体
         /// </summary>
         private Font _captionFont = Control.DefaultFont;
+
         /// <summary>
         /// 标题尺寸矩形大小（根据Caption属性计算）
         /// </summary>
         private SizeF _captionSize;
+
         /// <summary>
         /// 鼠标指针图像
         /// </summary>
         private Cursor _cursor = Cursors.Default;
+
         /// <summary>
         /// 默认宽度
         /// </summary>
         private int _defaultWidth = 19;
+
         /// <summary>
         /// 是否可用
         /// </summary>
         private bool _enable = true;
+
         /// <summary>
         /// 图像
         /// </summary>
         private Image _image = null;
+
         /// <summary>
         /// 图像对其方式
         /// </summary>
         private ContentAlignment _imageAlign = ContentAlignment.MiddleCenter;
+
         /// <summary>
         /// 图像相等比较器
         /// </summary>
         private ImageComparer _imageComparer = new ImageComparer();
+
         /// <summary>
         /// 按钮是否放在左侧
         /// </summary>
         private bool _isLeft = false;
+
         /// <summary>
         /// 按钮类型
         /// </summary>
@@ -101,7 +113,6 @@ namespace QGEditors.WinForms
             try
             {
                 btn = new Button();
-                _defButtonFont = btn.Font;
                 _defButtonGraphics = btn.CreateGraphics();
             }
             finally
@@ -147,12 +158,41 @@ namespace QGEditors.WinForms
         #region Properties
 
         /// <summary>
+        /// 获取或设置与当前按钮关联的文本。
+        /// </summary>
+        /// <remarks>
+        /// <see cref="EditorButton.Width"/>会根据文本长度变化。
+        /// </remarks>
+        /// <value>
+        /// 与此编辑器按钮关联的文本。
+        /// </value>
+        [DefaultValue("")]
+        [Localizable(true)]
+        public virtual string Caption
+        {
+            get
+            {
+                return _caption;
+            }
+            set
+            {
+                if (!string.Equals(this._caption, value) && this.RaisePropertyChanging("Caption"))
+                {
+                    string cap = this.Caption;
+                    this._caption = value;
+                    this._captionSize = value.GetTextSize(_defButtonGraphics, CaptionFont);
+                    this.Width = Convert.ToInt32(Math.Round(this._captionSize.Width));
+                    this.RaisePropertyChanged<string>("Caption", cap, value);
+                }
+            }
+        }
+
+        /// <summary>
         /// 获取或设置与当前按钮关联的文本的字体。
         /// </summary>
         /// <value>
         /// 要应用于由控件显示的文本的 <see cref="Font"/>。默认为 <see cref="Control.DefaultFont"/> 属性的值。
         /// </value>
-        [DefaultValue(typeof(Font), "DefaultFont")]
         [Localizable(true)]
         public virtual Font CaptionFont
         {
@@ -167,36 +207,6 @@ namespace QGEditors.WinForms
                     Font capFont = this.CaptionFont;
                     this._captionFont = value;
                     this.RaisePropertyChanged<Font>("CaptionFont", capFont, value);
-                }
-            }
-        }
-
-            /// <summary>
-            /// 获取或设置与当前按钮关联的文本。
-            /// </summary>
-            /// <remarks>
-            /// <see cref="EditorButton.Width"/>会根据文本长度变化。
-            /// </remarks>
-            /// <value>
-            /// 与此编辑器按钮关联的文本。
-            /// </value>
-            [DefaultValue("")]
-        [Localizable(true)]
-        public virtual string Caption
-        {
-            get
-            {
-                return _caption;
-            }
-            set
-            {
-                if (!string.Equals(this._caption, value) && this.RaisePropertyChanging("Caption"))
-                {
-                    string cap = this.Caption;
-                    this._caption = value;
-                    this._captionSize = value.GetTextSize(_defButtonGraphics, _defButtonFont);
-                    this.Width = Convert.ToInt32(Math.Round(this._captionSize.Width));
-                    this.RaisePropertyChanged<string>("Caption", cap, value);
                 }
             }
         }
@@ -451,6 +461,29 @@ namespace QGEditors.WinForms
             }
         }
 
+        /// <summary>
+        /// 获取或设置与当前按钮关联的文本的前景色。
+        /// </summary>
+        /// <value>
+        /// 要应用于由控件显示的文本的 <see cref="Color"/>。默认为 <see cref="Control.DefaultForeColor"/> 属性的值。
+        /// </value>
+        public Color CaptionColor
+        {
+            get
+            {
+                return _captionColor;
+            }
+            set
+            {
+                if (!string.Equals(this._captionColor, value) && this.RaisePropertyChanging("CaptionColor"))
+                {
+                    Color capColor = this.CaptionColor;
+                    this._captionColor = value;
+                    this.RaisePropertyChanged<Color>("CaptionColor", capColor, value);
+                }
+            }
+        }
+
         internal SizeF CaptionSize
         {
             get
@@ -492,6 +525,26 @@ namespace QGEditors.WinForms
                 return !e.Cancel;
             }
             return true;
+        }
+
+        protected void ResetCaptionColor()
+        {
+            CaptionColor = Control.DefaultForeColor;
+        }
+
+        protected bool ShouldSerializeCaptionColor()
+        {
+            return CaptionColor != Control.DefaultForeColor;
+        }
+
+        protected void ResetCaptionFont()
+        {
+            CaptionFont = Control.DefaultFont;
+        }
+
+        protected bool ShouldSerializeCaptionFont()
+        {
+            return CaptionFont != Control.DefaultFont;
         }
 
         private void SetKind(ButtonPredefines kind)
