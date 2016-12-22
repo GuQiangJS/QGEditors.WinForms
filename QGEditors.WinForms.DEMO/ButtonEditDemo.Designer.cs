@@ -35,7 +35,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonEdit1 = new QGEditors.WinForms.ButtonTextBoxControl();
+            this.buttonEdit1 = new QGEditors.WinForms.ButtonEditControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -245,7 +245,7 @@
 
         private SplitContainerControl splitContainerControl1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private ButtonTextBoxControl buttonEdit1;
+        private ButtonEditControl buttonEdit1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;

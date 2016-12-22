@@ -17,7 +17,7 @@ using QGEditors.WinForms.Properties;
 namespace QGEditors.WinForms
 {
     /// <summary>
-    /// 表示 <see cref="QGEditors.WinForms.ButtonTextBoxControl"/> 控件或后代中显示的单个编辑器按钮。
+    /// 表示 <see cref="QGEditors.WinForms.ButtonEditControl"/> 控件或后代中显示的单个编辑器按钮。
     /// </summary>
     [ComVisible(false)]
     [ToolboxItem(false)]

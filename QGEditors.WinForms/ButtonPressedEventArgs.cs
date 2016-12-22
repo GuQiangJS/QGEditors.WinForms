@@ -9,7 +9,7 @@ using System;
 namespace QGEditors.WinForms
 {
     /// <summary>
-    /// 为 <see cref="QGEditors.WinForms.ButtonTextBoxControl.ButtonClick"/> 事件提供数据。
+    /// 为 <see cref="QGEditors.WinForms.ButtonEditControl.ButtonClick"/> 事件提供数据。
     /// </summary>
     public class ButtonPressedEventArgs : EventArgs
     {

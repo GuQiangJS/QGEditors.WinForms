@@ -13,6 +13,7 @@ namespace QGEditors.WinForms
     /// <summary>
     /// 扩展 <see cref="SplitContainer"/> 。分割区域的可移动条中间显示分隔符。
     /// </summary>
+    [ToolboxBitmap(typeof(SplitContainerControl), "Resources.SplitContainerControl.png")]
     public sealed class SplitContainerControl : SplitContainer
     {
         #region Fields

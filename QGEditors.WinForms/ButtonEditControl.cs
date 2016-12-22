@@ -18,7 +18,9 @@ namespace QGEditors.WinForms
     /// </summary>
     [DefaultProperty("Buttons")]
     [DefaultEvent("ButtonClick")]
-    public class ButtonTextBoxControl : TextBox
+    [ToolboxBitmap(typeof(ButtonEditControl), "Resources.ButtonEditControl.png")]
+    [Description("支持在编辑框中内置按钮的文本编辑器。")]
+    public class ButtonEditControl : TextBox
     {
         #region Fields
 
@@ -42,9 +44,9 @@ namespace QGEditors.WinForms
         #region Constructors
 
         /// <summary>
-        /// 初始化 <see cref="QGEditors.WinForms.ButtonTextBoxControl"/>  类的新实例。
+        /// 初始化 <see cref="QGEditors.WinForms.ButtonEditControl"/>  类的新实例。
         /// </summary>
-        public ButtonTextBoxControl()
+        public ButtonEditControl()
         {
             this.Buttons.CollectionChanged += Buttons_CollectionChanged;
 
@@ -95,12 +97,6 @@ namespace QGEditors.WinForms
                 }
             }
         }
-
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    CreateButtons();
-        //    base.OnPaint(e);
-        //}
 
         protected override void OnResize(EventArgs e)
         {
@@ -357,7 +353,7 @@ namespace QGEditors.WinForms
             }
             foreach (KeyValuePair<Button, EditorButton> kv in this._innerButtons)
             {
-                if (ButtonTextBoxControl.Equals(kv.Value, button))
+                if (ButtonEditControl.Equals(kv.Value, button))
                 {
                     return kv.Key;
                 }
