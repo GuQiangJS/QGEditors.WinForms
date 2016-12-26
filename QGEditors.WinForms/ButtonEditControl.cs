@@ -20,11 +20,10 @@ namespace QGEditors.WinForms
     [DefaultEvent("ButtonClick")]
     [ToolboxBitmap(typeof(ButtonEditControl), "Resources.ButtonEditControl.png")]
     [Description("支持在编辑框中内置按钮的文本编辑器。")]
-    public class ButtonEditControl : TextBox
+    public sealed class ButtonEditControl : TextBox
     {
         #region Fields
 
-        private static readonly object buttonClick = new object();
         private static bool _setLocalAndSize = false;
 
         /// <summary>
@@ -120,8 +119,8 @@ namespace QGEditors.WinForms
             //文字高度偏移量
             int textTopMargin = 0;
 
-            int width = Convert.ToInt32(Math.Round(editorBtn.CaptionSize.Width));
-            int height = Convert.ToInt32(Math.Round(editorBtn.CaptionSize.Height));
+            int width = editorBtn.CaptionSize.Width.ToInt32();
+            int height = editorBtn.CaptionSize.Height.ToInt32();
 
             int top = ((btn.ClientSize.Height - height) / 2) + textTopMargin;
             int left = (btn.ClientSize.Width - width) / 2;
@@ -183,6 +182,14 @@ namespace QGEditors.WinForms
                 btn.Width = editorBtn.Width;
                 btn.Cursor = editorBtn.Cursor;
                 btn.Visible = editorBtn.Visible;
+                if (string.IsNullOrEmpty(editorBtn.Name))
+                {
+                    editorBtn.Name = btn.Name;
+                }
+                else
+                {
+                    btn.Name = editorBtn.Name;
+                }
             }
         }
 
@@ -277,7 +284,10 @@ namespace QGEditors.WinForms
                         {
                             if (editorBtn.Enabled)
                             {
-                                e.Graphics.DrawString(editorBtn.Caption, editorBtn.CaptionFont, new SolidBrush(editorBtn.CaptionColor), GetTextRectangle(btn, editorBtn));
+                                using (Brush brush = new SolidBrush(editorBtn.CaptionColor))
+                                {
+                                    e.Graphics.DrawString(editorBtn.Caption, editorBtn.CaptionFont, brush, GetTextRectangle(btn, editorBtn));
+                                }
                             }
                             else
                             {

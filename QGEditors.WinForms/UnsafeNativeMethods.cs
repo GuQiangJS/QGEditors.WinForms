@@ -15,8 +15,5 @@ namespace QGEditors.WinForms
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         internal static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wp, IntPtr lp);
 
-        [System.Runtime.InteropServices.DllImport(@"User32.dll", EntryPoint = @"SendMessage", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
-        internal static extern int SendMessageRefRect(IntPtr hWnd, uint msg, int wParam, ref System.Drawing.Rectangle rect);
-
     }
 }

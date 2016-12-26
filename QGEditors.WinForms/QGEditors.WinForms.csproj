@@ -154,6 +154,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\SplitContainerControl.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attachment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnLock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>echo f | xcopy /y "$(TargetPath)" "$(SolutionDir)QGEditors.Output.$(ConfigurationName)\$(TargetFileName)"

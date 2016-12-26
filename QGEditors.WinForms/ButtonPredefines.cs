@@ -7,6 +7,8 @@
 using System.Drawing;
 using QGEditors.WinForms.Properties;
 using System.ComponentModel;
+using System;
+using System.Resources;
 
 namespace QGEditors.WinForms
 {
@@ -18,97 +20,126 @@ namespace QGEditors.WinForms
     public enum ButtonPredefines
     {
         /// <summary>
+        /// @符号
+        /// </summary>
+        AT=0,
+        /// <summary>
+        /// 附件
+        /// </summary>
+        Attachment=1,
+        /// <summary>
         /// 自定义图像。
         /// </summary>
-        Glyph = 0,
+        Glyph = 2,
         /// <summary>
         /// 后退
         /// </summary>
-        Backward = 2,
+        Backward = 3,
         /// <summary>
         /// 删除
         /// </summary>
-        Delete = 3,
+        Delete = 4,
         /// <summary>
         /// 向下箭头
         /// </summary>
-        Down = 4,
+        Down = 5,
         /// <summary>
         /// 编辑
         /// </summary>
-        Edit = 5,
+        Edit = 6,
         /// <summary>
         /// 省略号
         /// </summary>
-        Elipsis = 1,
+        Elipsis = 7, 
         /// <summary>
         /// 收藏
         /// </summary>
-        Favorite = 6,
+        Favorite = 8,
+        /// <summary>
+        /// 文件
+        /// </summary>
+        File=9,    
         /// <summary>
         /// 前进
         /// </summary>
-        Forward = 7,
+        Forward = 10,
         /// <summary>
         /// 帮助
         /// </summary>
-        Help = 8,
+        Help = 11,
         /// <summary>
         /// 向左箭头
         /// </summary>
-        Left = 9,
+        Left = 12,    
+        /// <summary>
+        /// 锁定
+        /// </summary>
+        Lock=13,     
         /// <summary>
         /// 循环
         /// </summary>
-        Loop = 10,
+        Loop = 14,
+        /// <summary>
+        /// Mail
+        /// </summary>
+        Mail = 15,
         /// <summary>
         /// 减号/负号
         /// </summary>
-        Minus = 11,
+        Minus = 16,
         /// <summary>
         /// Ok
         /// </summary>
-        Ok = 12,
+        Ok = 17,
         /// <summary>
         /// 选项/设置
         /// </summary>
-        Option = 13,
+        Option = 18,
         /// <summary>
         /// 暂停
         /// </summary>
-        Pause = 14,
+        Pause = 19,
         /// <summary>
         /// 播放
         /// </summary>
-        Play = 15,
+        Play = 20,
         /// <summary>
         /// 加号
         /// </summary>
-        Plus = 16,
+        Plus = 21,
         /// <summary>
         /// 恢复/重复/恢复上一次操作
         /// </summary>
-        Redo = 17,
+        Redo = 22,
         /// <summary>
         /// 向右箭头
         /// </summary>
-        Right = 18,
+        Right = 23,        
+        /// <summary>
+        /// 保存
+        /// </summary>
+        Save=24,
         /// <summary>
         /// 搜索
         /// </summary>
-        Search = 19,
+        Search = 25,
         /// <summary>
         /// 垃圾箱/回收站
         /// </summary>
-        Trash = 20,
+        Trash = 26,
+        /// <summary>
+        /// 未锁定
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "Un")]
+        UnLock=27,
         /// <summary>
         /// 撤消/复原/撤消本次操作
         /// </summary>
-        Undo = 21,
+        Undo = 28,
         /// <summary>
         /// 向上箭头
         /// </summary>
-        Up = 22
+        Up = 29   
     }
 
     internal static class ButtonPredefinesHelper
@@ -117,77 +148,12 @@ namespace QGEditors.WinForms
 
         internal static Image GetImage(this ButtonPredefines p)
         {
-            switch (p)
+            object obj = Resources.ResourceManager.GetObject(Enum.GetName(typeof(ButtonPredefines), p), Resources.Culture);
+            if(obj!=null)
             {
-                case ButtonPredefines.Backward:
-                    return Resources.Backward;
-
-                case ButtonPredefines.Delete:
-                    return Resources.Delete;
-
-                case ButtonPredefines.Down:
-                    return Resources.Down;
-
-                case ButtonPredefines.Edit:
-                    return Resources.Edit;
-
-                case ButtonPredefines.Elipsis:
-                    return Resources.Elipsis;
-
-                case ButtonPredefines.Favorite:
-                    return Resources.Favorite;
-
-                case ButtonPredefines.Forward:
-                    return Resources.Forward;
-
-                case ButtonPredefines.Help:
-                    return Resources.Help;
-
-                case ButtonPredefines.Left:
-                    return Resources.Left;
-
-                case ButtonPredefines.Loop:
-                    return Resources.Loop;
-
-                case ButtonPredefines.Minus:
-                    return Resources.Minus;
-
-                case ButtonPredefines.Ok:
-                    return Resources.OK;
-
-                case ButtonPredefines.Option:
-                    return Resources.Option;
-
-                case ButtonPredefines.Pause:
-                    return Resources.Pause;
-
-                case ButtonPredefines.Play:
-                    return Resources.Play;
-
-                case ButtonPredefines.Plus:
-                    return Resources.Plus;
-
-                case ButtonPredefines.Redo:
-                    return Resources.Redo;
-
-                case ButtonPredefines.Right:
-                    return Resources.Right;
-
-                case ButtonPredefines.Search:
-                    return Resources.Search;
-
-                case ButtonPredefines.Trash:
-                    return Resources.Trash;
-
-                case ButtonPredefines.Undo:
-                    return Resources.Undo;
-
-                case ButtonPredefines.Up:
-                    return Resources.Up;
-
-                default:
-                    return null;
+                return ((System.Drawing.Bitmap)(obj));
             }
+            return null;
         }
 
         #endregion

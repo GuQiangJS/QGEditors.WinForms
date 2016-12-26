@@ -60,11 +60,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonEditDemo.cs">
+    <Compile Include="ButtonEditControlDemo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ButtonEditDemo.Designer.cs">
-      <DependentUpon>ButtonEditDemo.cs</DependentUpon>
+    <Compile Include="ButtonEditControlDemo.Designer.cs">
+      <DependentUpon>ButtonEditControlDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonPredefinesDemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButtonPredefinesDemo.Designer.cs">
+      <DependentUpon>ButtonPredefinesDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="ObjectHelper.cs" />
     <Compile Include="SplitContainerControlDemo.cs">
@@ -81,8 +87,11 @@
     <Compile Include="ButtonEditAppearance.Designer.cs">
       <DependentUpon>ButtonEditAppearance.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ButtonEditDemo.resx">
-      <DependentUpon>ButtonEditDemo.cs</DependentUpon>
+    <EmbeddedResource Include="ButtonEditControlDemo.resx">
+      <DependentUpon>ButtonEditControlDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButtonPredefinesDemo.resx">
+      <DependentUpon>ButtonPredefinesDemo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitContainerControlDemo.resx">
       <DependentUpon>SplitContainerControlDemo.cs</DependentUpon>

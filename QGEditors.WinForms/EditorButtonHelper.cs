@@ -31,23 +31,6 @@ namespace QGEditors.WinForms
 
     internal static class ControlHelper
     {
-        internal static Color GetDisabledColor(this Control control)
-        {
-            Color backColor = control.BackColor;
-            if (backColor.A == 0)
-            {
-                for (Control c = control.Parent; backColor.A == 0; c = c.Parent)
-                {
-                    if (c == null)
-                    {
-                        return SystemColors.Control;
-                    }
-                    backColor = c.BackColor;
-                }
-            }
-            return backColor;
-        }
-
         internal static Point GetImageLocation(this Control control, ContentAlignment align, Image image)
         {
             if (control != null && image != null)

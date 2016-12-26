@@ -37,6 +37,11 @@ namespace QGEditors.WinForms
         private string _caption = "";
 
         /// <summary>
+        /// 名称
+        /// </summary>
+        private string _name = "";
+
+        /// <summary>
         /// 标题前景色
         /// </summary>
         private Color _captionColor = Control.DefaultForeColor;
@@ -181,8 +186,27 @@ namespace QGEditors.WinForms
                     string cap = this.Caption;
                     this._caption = value;
                     this._captionSize = value.GetTextSize(_defButtonGraphics, CaptionFont);
-                    this.Width = Convert.ToInt32(Math.Round(this._captionSize.Width));
+                    this.Width = this._captionSize.Width.ToInt32();
                     this.RaisePropertyChanged<string>("Caption", cap, value);
+                }
+            }
+        }
+
+        [DefaultValue("")]
+        [Localizable(true)]
+        public virtual string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (!string.Equals(this._name, value) && this.RaisePropertyChanging("Name"))
+                {
+                    string name = this.Name;
+                    this._name = value;
+                    this.RaisePropertyChanged<string>("Name", name, value);
                 }
             }
         }
@@ -353,7 +377,7 @@ namespace QGEditors.WinForms
         /// 默认为 <see cref="ButtonPredefines.Elipsis"/> 。
         /// 修改为 <see cref="ButtonPredefines.Glyph"/> 后会根据 <see cref="EditorButton.Image"/> 属性和 <see cref="EditorButton.Caption"/> 属性显示内容。
         /// </remarks>
-        [DefaultValue(1)]
+        [DefaultValue(7)]
         [Localizable(true)]
         public virtual ButtonPredefines Kind
         {

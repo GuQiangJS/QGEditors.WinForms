@@ -1,6 +1,6 @@
 ﻿namespace QGEditors.WinForms.DEMO
 {
-    partial class ButtonEditDemo
+    partial class ButtonEditControlDemo
     {
         /// <summary>
         /// Required designer variable.

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace QGEditors.WinForms.DEMO
 {
-    public partial class ButtonEditDemo : Form
+    public partial class ButtonEditControlDemo : Form
     {
         #region Constructors
 
-        public ButtonEditDemo()
+        public ButtonEditControlDemo()
         {
             InitializeComponent();
 

@@ -4,6 +4,7 @@
  *  ALL RIGHTS RESERVED
 */
 
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
@@ -13,6 +14,11 @@ namespace QGEditors.WinForms
     internal static class ObjectHelper
     {
         #region Methods
+
+        internal static int ToInt32(this float value)
+        {
+            return Convert.ToInt32(Math.Round(value));
+        }
 
         internal static string GetObjectText(object obj)
         {
