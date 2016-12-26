@@ -57,6 +57,7 @@
     <Compile Include="ButtonPredefines.cs" />
     <Compile Include="ButtonPressedEventArgs.cs" />
     <Compile Include="ButtonPressedEventHandler.cs" />
+    <Compile Include="ControlHelper.cs" />
     <Compile Include="EditorButton.cs" />
     <Compile Include="EditorButtonCollection.cs" />
     <Compile Include="EditorButtonHelper.cs" />

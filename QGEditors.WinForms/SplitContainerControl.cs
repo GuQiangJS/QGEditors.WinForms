@@ -4,7 +4,9 @@
  *  ALL RIGHTS RESERVED
 */
 
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -14,8 +16,74 @@ namespace QGEditors.WinForms
     /// 扩展 <see cref="SplitContainer"/> 。分割区域的可移动条中间显示分隔符。
     /// </summary>
     [ToolboxBitmap(typeof(SplitContainerControl), "Resources.SplitContainerControl.png")]
-    public sealed class SplitContainerControl : SplitContainer
+    public sealed class SplitContainerControl : SplitContainer,INotifyPropertyChanged,INotifyPropertyChanging
     {
+        private Image _splitterImage;
+
+        /// <summary>
+        /// 获取或设置显示在拆分器上的图像。
+        /// </summary>
+        /// <value>
+        /// 默认值为 <c>null</c>。
+        /// </value>
+        [DefaultValue((string)null)]
+        [Localizable(true)]
+        public Image SplitterImage
+        {
+            get
+            {
+                return _splitterImage;
+            }
+            set
+            {
+                if (_splitterImage != value && this.RaisePropertyChanging("Image"))
+                {
+                    Image img = this.SplitterImage;
+                    this._splitterImage = value;
+                    this.RaisePropertyChanged<Image>("Image", img, value);
+                    this.Refresh();
+                }
+            }
+        }
+        
+        private ImageLayout _splitterImageLayout = ImageLayout.Center;
+
+        /// <summary>
+        /// 获取或设置在 <see cref="System.Windows.Forms.ImageLayout"/> 枚举中定义的背景图像布局。。
+        /// </summary>
+        [DefaultValue(ImageLayout.Center)]
+        [Localizable(true)]
+        public ImageLayout SplitterImageLayout
+        {
+            get
+            {
+                return _splitterImageLayout;
+            }
+            set
+            {
+                if (this._splitterImageLayout != value && this.RaisePropertyChanging("BackgroundImageLayout"))
+                {
+                    ImageLayout layout = this._splitterImageLayout;
+                    this._splitterImageLayout = value;
+                    this.RaisePropertyChanged<ImageLayout>("BackgroundImageLayout", layout, value);
+                    this.Refresh();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 在鼠标单击拆分器时发生。
+        /// </summary>
+        public event MouseEventHandler SplitterMouseClick;
+        /// <summary>
+        /// 在属性值更改时发生。
+        /// </summary>
+        public event PropertyChangingEventHandler PropertyChanging;
+        /// <summary>
+        /// 在更改属性值时发生。
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
         #region Fields
 
         //绘图高度
@@ -34,6 +102,21 @@ namespace QGEditors.WinForms
 
         #region Methods
 
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            if (e!=null && e.Location!=null && this.SplitterRectangle.Contains(e.Location))
+            {
+                if(this.SplitterMouseClick!=null)
+                {
+                    this.SplitterMouseClick(this, e);
+                }
+            }
+            else
+            {
+                base.OnMouseClick(e);
+            }
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             if (e == null || e.ClipRectangle == null || e.Graphics == null)
@@ -41,73 +124,104 @@ namespace QGEditors.WinForms
                 return;
             }
 
-            Point mousePoint = this.PointToClient(Control.MousePosition);
-
-            Pen pen = SystemPens.ControlDark;
-            Brush brush = SystemBrushes.ControlDark;
-
-            if (mousePoint.X <= e.ClipRectangle.Width && mousePoint.Y <= e.ClipRectangle.Height)
+            if (this.SplitterImage == null)
             {
-                pen = SystemPens.ControlDarkDark;
-                brush = SystemBrushes.ControlDarkDark;
-            }
+                #region 绘制默认分隔符
+                Pen pen = SystemPens.ControlDark;
+                Brush brush = SystemBrushes.ControlDark;
 
-            Rectangle rect = new Rectangle();
+                if (e.ClipRectangle.Contains(this.PointToClient(Control.MousePosition)))
+                {
+                    pen = SystemPens.ControlDarkDark;
+                    brush = SystemBrushes.ControlDarkDark;
+                }
 
-            if (this.Orientation == Orientation.Horizontal)
-            {
-                int startX = (e.ClipRectangle.Width / 2 - _MAX / 2);
-                int endX = (e.ClipRectangle.Width / 2 + _MAX / 2);
-                rect.X = startX;
-                rect.Width = _MAX;
-                rect.Y = e.ClipRectangle.Y + (e.ClipRectangle.Height - _HEIGHT) / 2;
-                rect.Height = e.ClipRectangle.Height - 1;
+                Rectangle rect = new Rectangle();
+
+                if (this.Orientation == Orientation.Horizontal)
+                {
+                    int startX = (e.ClipRectangle.Width / 2 - _MAX / 2);
+                    int endX = (e.ClipRectangle.Width / 2 + _MAX / 2);
+                    rect.X = startX;
+                    rect.Width = _MAX;
+                    rect.Y = e.ClipRectangle.Y + (e.ClipRectangle.Height - _HEIGHT) / 2;
+                    rect.Height = e.ClipRectangle.Height - 1;
+                }
+                else
+                {
+                    int startX = (e.ClipRectangle.Height / 2 - _MAX / 2);
+                    int endX = (e.ClipRectangle.Height / 2 + _MAX / 2);
+                    rect.X = e.ClipRectangle.X + (e.ClipRectangle.Width - _WIDTH) / 2;
+                    rect.Width = e.ClipRectangle.Width - 1;
+                    rect.Y = startX;
+                    rect.Height = _MAX;
+                }
+
+                Queue<Rectangle> rects = new Queue<Rectangle>();
+
+                if (this.Orientation == Orientation.Horizontal)
+                {
+                    int left = rect.X;
+                    while (left < (rect.X + _MAX) && left + _WIDTH < (rect.X + _MAX))
+                    {
+                        Rectangle rec = new Rectangle();
+                        rec.X = left;
+                        rec.Width = _WIDTH;
+                        rec.Height = _HEIGHT;
+                        rec.Y = rect.Y;
+                        left = left + _SPACING;
+                        rects.Enqueue(rec);
+                    }
+                }
+                else
+                {
+                    int top = rect.Y;
+                    while (top < (rect.Y + _MAX) && top + _HEIGHT < (rect.Y + _MAX))
+                    {
+                        Rectangle rec = new Rectangle();
+                        rec.X = rect.X;
+                        rec.Width = _WIDTH;
+                        rec.Height = _HEIGHT;
+                        rec.Y = top;
+                        top = top + _SPACING;
+                        rects.Enqueue(rec);
+                    }
+                }
+                if (rects.Count > 0)
+                {
+                    e.Graphics.DrawRectangles(pen, rects.ToArray());
+                    e.Graphics.FillRectangles(brush, rects.ToArray());
+                }
+                #endregion
             }
             else
             {
-                int startX = (e.ClipRectangle.Height / 2 - _MAX / 2);
-                int endX = (e.ClipRectangle.Height / 2 + _MAX / 2);
-                rect.X = e.ClipRectangle.X + (e.ClipRectangle.Width - _WIDTH) / 2;
-                rect.Width = e.ClipRectangle.Width - 1;
-                rect.Y = startX;
-                rect.Height = _MAX;
+                #region 根据设置绘制图片
+                e.Graphics.DrawBackgroundImage(this.SplitterImage, this.BackColor, this.SplitterImageLayout, this.SplitterRectangle, this.SplitterRectangle, new Point(0, 0), this.RightToLeft);
+                #endregion
             }
+        }
 
-            Queue<Rectangle> rects = new Queue<Rectangle>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
+        internal void RaisePropertyChanged<T>(string propertyName, T oldValue, T newValue)
+        {
+            if (this.PropertyChanged != null)
+            {
+                PropertyChangedEventArgsEx e = new PropertyChangedEventArgsEx(propertyName, oldValue, newValue);
+                this.PropertyChanged(this, e);
+            }
+        }
 
-            if (this.Orientation == Orientation.Horizontal)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
+        internal bool RaisePropertyChanging(string propertyName)
+        {
+            if (this.PropertyChanging != null)
             {
-                int left = rect.X;
-                while (left < (rect.X + _MAX) && left + _WIDTH < (rect.X + _MAX))
-                {
-                    Rectangle rec = new Rectangle();
-                    rec.X = left;
-                    rec.Width = _WIDTH;
-                    rec.Height = _HEIGHT;
-                    rec.Y = rect.Y;
-                    left = left + _SPACING;
-                    rects.Enqueue(rec);
-                }
+                PropertyChangingEventArgsEx e = new PropertyChangingEventArgsEx(propertyName);
+                this.PropertyChanging(this, e);
+                return !e.Cancel;
             }
-            else
-            {
-                int top = rect.Y;
-                while (top < (rect.Y + _MAX) && top + _HEIGHT < (rect.Y + _MAX))
-                {
-                    Rectangle rec = new Rectangle();
-                    rec.X = rect.X;
-                    rec.Width = _WIDTH;
-                    rec.Height = _HEIGHT;
-                    rec.Y = top;
-                    top = top + _SPACING;
-                    rects.Enqueue(rec);
-                }
-            }
-            if (rects.Count > 0)
-            {
-                e.Graphics.DrawRectangles(pen, rects.ToArray());
-                e.Graphics.FillRectangles(brush, rects.ToArray());
-            }
+            return true;
         }
 
         #endregion
