@@ -107,7 +107,7 @@
     <None Include="Resources\Minus.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\OK.png" />
+    <None Include="Resources\Ok.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Option.png" />

@@ -96,12 +96,30 @@ namespace QGEditors.WinForms
         /// </summary>
         private ButtonPredefines _kind = ButtonPredefines.Elipsis;
 
-        private Image[] _presetImages ={Resources.Backward,Resources.Delete,Resources.Delete,Resources.Down,
-                                      Resources.Edit,Resources.Elipsis,Resources.Favorite,Resources.Forward,
-                                      Resources.Help,Resources.Left,Resources.Loop,Resources.Minus,
-                                      Resources.OK,Resources.Option,Resources.Pause,Resources.Play,
-                                      Resources.Plus,Resources.Redo,Resources.Right,Resources.Search,
-                                      Resources.Trash,Resources.Undo,Resources.Up};
+        private Image[] _presetImages;
+
+        private Image[] presetImages
+        {
+            get
+            {
+                if (_presetImages == null || _presetImages.Length <= 0)
+                {
+                    Queue<Image> i = new Queue<Image>();
+                    string[] images = Enum.GetNames(typeof(ButtonPredefines));
+                    foreach (string image in images)
+                    {
+                        Object obj = Resources.ResourceManager.GetObject(image, Resources.Culture);
+                        Image im = ((System.Drawing.Bitmap)(obj));
+                        if (im != null)
+                        {
+                            i.Enqueue(im);
+                        }
+                    }
+                    _presetImages = i.ToArray();
+                }
+                return _presetImages;
+            }
+        }
 
         private string _tooltip = "";
         private bool _visible = true;
@@ -311,7 +329,7 @@ namespace QGEditors.WinForms
                     Image img = this.Image;
                     this._image = value;
                     this.RaisePropertyChanged<Image>("Image", img, value);
-                    if (!_presetImages.Contains(value, _imageComparer))
+                    if (!presetImages.Contains(value, _imageComparer))
                     {
                         this._kind = ButtonPredefines.Glyph;
                     }
