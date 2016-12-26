@@ -9,13 +9,13 @@
     <ProjectGuid>d52b7878-6058-4c86-b3b6-68def1c5d2c4</ProjectGuid>
     <SHFBSchemaVersion>2015.6.5.0</SHFBSchemaVersion>
     <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
-    <AssemblyName>QGEditor.WinForms.DocBuilder</AssemblyName>
-    <RootNamespace>QGEditor.WinForms.DocBuilder</RootNamespace>
-    <Name>QGEditor.WinForms.DocBuilder</Name>
+    <AssemblyName>QGEditors.WinForms.DocBuilder</AssemblyName>
+    <RootNamespace>QGEditors.WinForms.DocBuilder</RootNamespace>
+    <Name>QGEditors.WinForms.DocBuilder</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.0</FrameworkVersion>
     <OutputPath>..\QGEditors.Output.Doc\</OutputPath>
-    <HtmlHelpName>QGEditor.WinForms Helper</HtmlHelpName>
+    <HtmlHelpName>QGEditors.WinForms Helper</HtmlHelpName>
     <Language>zh-CN</Language>
     <TransformComponentArguments>
       <Argument Key="logoFile" Value="Help.png" xmlns="" />

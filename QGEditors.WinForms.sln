@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QGEditors.WinForms", "QGEdi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QGEditors.WinForms.DEMO", "QGEditors.WinForms.DEMO\QGEditors.WinForms.DEMO.csproj", "{6EBE6ACA-4DD4-4CE8-88BD-0DACF1CBEBD3}"
 EndProject
-Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "QGEditor.WinForms.DocBuilder", "QGEditor.WinForms.DocBuilder\QGEditor.WinForms.DocBuilder.shfbproj", "{D52B7878-6058-4C86-B3B6-68DEF1C5D2C4}"
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "QGEditors.WinForms.DocBuilder", "QGEditors.WinForms.DocBuilder\QGEditors.WinForms.DocBuilder.shfbproj", "{D52B7878-6058-4C86-B3B6-68DEF1C5D2C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
