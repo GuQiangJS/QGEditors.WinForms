@@ -77,7 +77,7 @@ namespace QGEditors.WinForms
         private Image _image = null;
 
         /// <summary>
-        /// 图像对其方式
+        /// 图像对齐方式
         /// </summary>
         private ContentAlignment _imageAlign = ContentAlignment.MiddleCenter;
 

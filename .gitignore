@@ -250,3 +250,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/QGEditors.Output.Debug
+/QGEditors.Output.Release
+/QGEditors.Output.WinForms.Demo
