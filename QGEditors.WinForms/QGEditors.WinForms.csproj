@@ -181,6 +181,11 @@
     <PostBuildEvent>echo f | xcopy /y "$(TargetPath)" "$(SolutionDir)QGEditors.Output.$(ConfigurationName)\$(TargetFileName)"
 echo f | xcopy /y "$(TargetName).xml" "$(SolutionDir)QGEditors.Output.$(ConfigurationName)\$(TargetName).xml"</PostBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>if $(ConfigurationName) == Release (
+    call $(SolutionDir)Supports\AssemblyInfoUtil.exe -inc:4 $(ProjectDir)Properties\AssemblyInfo.cs
+)</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

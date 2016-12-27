@@ -4,7 +4,6 @@
  *  ALL RIGHTS RESERVED
 */
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,9 +15,43 @@ namespace QGEditors.WinForms
     /// 扩展 <see cref="SplitContainer"/> 。分割区域的可移动条中间显示分隔符。
     /// </summary>
     [ToolboxBitmap(typeof(SplitContainerControl), "Resources.SplitContainerControl.png")]
-    public sealed class SplitContainerControl : SplitContainer,INotifyPropertyChanged,INotifyPropertyChanging
+    public sealed class SplitContainerControl : SplitContainer, INotifyPropertyChanged, INotifyPropertyChanging
     {
+        #region Fields
+
+        //绘图高度
+        private const int _HEIGHT = 1;
+
+        //最大高度或最大宽度（根据Orientation属性确定）
+        private const int _MAX = 15;
+
+        //间隔宽度
+        private const int _SPACING = 3;
+
+        //绘图宽度
+        private const int _WIDTH = 1;
+
         private Image _splitterImage;
+
+        private ImageLayout _splitterImageLayout = ImageLayout.Center;
+
+        #endregion
+
+        #region Events
+
+        /// <summary>
+        /// 在更改属性值时发生。
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// 在属性值更改时发生。
+        /// </summary>
+        public event PropertyChangingEventHandler PropertyChanging;
+
+        #endregion
+
+        #region Properties
 
         /// <summary>
         /// 获取或设置显示在拆分器上的图像。
@@ -45,8 +78,6 @@ namespace QGEditors.WinForms
                 }
             }
         }
-        
-        private ImageLayout _splitterImageLayout = ImageLayout.Center;
 
         /// <summary>
         /// 获取或设置在 <see cref="System.Windows.Forms.ImageLayout"/> 枚举中定义的背景图像布局。。
@@ -71,50 +102,30 @@ namespace QGEditors.WinForms
             }
         }
 
-        /// <summary>
-        /// 在鼠标单击拆分器时发生。
-        /// </summary>
-        public event MouseEventHandler SplitterMouseClick;
-        /// <summary>
-        /// 在属性值更改时发生。
-        /// </summary>
-        public event PropertyChangingEventHandler PropertyChanging;
-        /// <summary>
-        /// 在更改属性值时发生。
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        #region Fields
-
-        //绘图高度
-        private const int _HEIGHT = 1;
-
-        //最大高度或最大宽度（根据Orientation属性确定）
-        private const int _MAX = 15;
-
-        //间隔宽度
-        private const int _SPACING = 3;
-
-        //绘图宽度
-        private const int _WIDTH = 1;
-
         #endregion
 
         #region Methods
 
-        protected override void OnMouseClick(MouseEventArgs e)
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
+        internal void RaisePropertyChanged<T>(string propertyName, T oldValue, T newValue)
         {
-            if (e!=null && e.Location!=null && this.SplitterRectangle.Contains(e.Location))
+            if (this.PropertyChanged != null)
             {
-                if(this.SplitterMouseClick!=null)
-                {
-                    this.SplitterMouseClick(this, e);
-                }
+                PropertyChangedEventArgsEx e = new PropertyChangedEventArgsEx(propertyName, oldValue, newValue);
+                this.PropertyChanged(this, e);
             }
-            else
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
+        internal bool RaisePropertyChanging(string propertyName)
+        {
+            if (this.PropertyChanging != null)
             {
-                base.OnMouseClick(e);
+                PropertyChangingEventArgsEx e = new PropertyChangingEventArgsEx(propertyName);
+                this.PropertyChanging(this, e);
+                return !e.Cancel;
             }
+            return true;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -127,6 +138,7 @@ namespace QGEditors.WinForms
             if (this.SplitterImage == null)
             {
                 #region 绘制默认分隔符
+
                 Pen pen = SystemPens.ControlDark;
                 Brush brush = SystemBrushes.ControlDark;
 
@@ -192,36 +204,17 @@ namespace QGEditors.WinForms
                     e.Graphics.DrawRectangles(pen, rects.ToArray());
                     e.Graphics.FillRectangles(brush, rects.ToArray());
                 }
+
                 #endregion
             }
             else
             {
                 #region 根据设置绘制图片
+
                 e.Graphics.DrawBackgroundImage(this.SplitterImage, this.BackColor, this.SplitterImageLayout, this.SplitterRectangle, this.SplitterRectangle, new Point(0, 0), this.RightToLeft);
+
                 #endregion
             }
-        }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
-        internal void RaisePropertyChanged<T>(string propertyName, T oldValue, T newValue)
-        {
-            if (this.PropertyChanged != null)
-            {
-                PropertyChangedEventArgsEx e = new PropertyChangedEventArgsEx(propertyName, oldValue, newValue);
-                this.PropertyChanged(this, e);
-            }
-        }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1030:UseEventsWhereAppropriate")]
-        internal bool RaisePropertyChanging(string propertyName)
-        {
-            if (this.PropertyChanging != null)
-            {
-                PropertyChangingEventArgsEx e = new PropertyChangingEventArgsEx(propertyName);
-                this.PropertyChanging(this, e);
-                return !e.Cancel;
-            }
-            return true;
         }
 
         #endregion
