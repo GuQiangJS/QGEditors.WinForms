@@ -84,23 +84,49 @@ namespace QGEditors.WinForms
 
         #region Methods
 
-        protected override void OnKeyUp(KeyEventArgs e)
-        {
-            base.OnKeyUp(e);
-            if (this.ShortcutsEnabled && e != null)
-            {
-                Button btn = FindButton(e.KeyCode);
-                if (btn != null)
-                {
-                    this.btn_Click(btn, EventArgs.Empty);
-                }
-            }
-        }
-
         protected override void OnResize(EventArgs e)
         {
             SetSizeAndLocation();
             base.OnResize(e);
+        }
+
+        /// <summary>
+        /// Processes the command key.
+        /// </summary>
+        /// <param name="msg">The MSG.</param>
+        /// <param name="keyData">The key data.</param>
+        /// <returns>
+        /// 如果命令键已由控件处理，则为 true；否则为 false。
+        /// </returns>
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            Button btn = null;
+            if (this.ShortcutsEnabled && TryGetButtonByCmdKey(keyData, out btn))
+            {
+                btn_Click(btn, EventArgs.Empty);
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        /// <summary>
+        /// Tries the get button by command key.
+        /// </summary>
+        /// <param name="keyData">The key data.</param>
+        /// <param name="btn">The BTN.</param>
+        /// <returns></returns>
+        private bool TryGetButtonByCmdKey(Keys keyData, out Button btn)
+        {
+            btn = null;
+            foreach (KeyValuePair<Button, EditorButton> kv in _innerButtons)
+            {
+                if (kv.Value.ShortcutKeys == keyData)
+                {
+                    btn = kv.Key;
+                    return true;
+                }
+            }
+            return false;
         }
 
         protected override void WndProc(ref Message m)
@@ -350,11 +376,6 @@ namespace QGEditors.WinForms
             SetSizeAndLocation();
         }
 
-        private Button FindButton(Keys keys)
-        {
-            return FindButton(FindEditorButton(keys));
-        }
-
         private Button FindButton(EditorButton button)
         {
             if (button == null)
@@ -366,18 +387,6 @@ namespace QGEditors.WinForms
                 if (ButtonEditControl.Equals(kv.Value, button))
                 {
                     return kv.Key;
-                }
-            }
-            return null;
-        }
-
-        private EditorButton FindEditorButton(Keys keys)
-        {
-            foreach (EditorButton btn in this._innerButtons.Values)
-            {
-                if (Enum.Equals(keys, btn.Shortcut))
-                {
-                    return btn;
                 }
             }
             return null;

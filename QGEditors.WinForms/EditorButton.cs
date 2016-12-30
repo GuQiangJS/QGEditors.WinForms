@@ -423,7 +423,7 @@ namespace QGEditors.WinForms
         /// <value>默认值 <see cref="Keys.None"/> 。</value>
         [DefaultValue(0)]
         [Localizable(true)]
-        public virtual Keys Shortcut { get; set; }
+        public virtual Keys ShortcutKeys { get; set; }
 
         /// <summary>
         /// 获取或设置为在此元素显示的工具提示对象 用户界面 (UI)。

@@ -41,9 +41,9 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.buttonEditAppearance1 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
-            this.buttonEditAppearance2 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
-            this.buttonEditAppearance3 = new QGEditors.WinForms.DEMO.ButtonEditAppearance();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.propertyGrid2 = new System.Windows.Forms.PropertyGrid();
+            this.propertyGrid3 = new System.Windows.Forms.PropertyGrid();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
             this.splitContainerControl1.Panel2.SuspendLayout();
@@ -73,8 +73,8 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainerControl1.Panel2.Padding = new System.Windows.Forms.Padding(5);
-            this.splitContainerControl1.Size = new System.Drawing.Size(530, 352);
-            this.splitContainerControl1.SplitterDistance = 273;
+            this.splitContainerControl1.Size = new System.Drawing.Size(602, 506);
+            this.splitContainerControl1.SplitterDistance = 310;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // groupBox3
@@ -85,7 +85,7 @@
             this.groupBox3.Controls.Add(this.richTextBox1);
             this.groupBox3.Location = new System.Drawing.Point(6, 102);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 242);
+            this.groupBox3.Size = new System.Drawing.Size(299, 396);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ButtonEvent";
@@ -95,7 +95,7 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(3, 17);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(256, 222);
+            this.richTextBox1.Size = new System.Drawing.Size(293, 376);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -106,7 +106,7 @@
             this.groupBox1.Controls.Add(this.buttonEdit1);
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(263, 91);
+            this.groupBox1.Size = new System.Drawing.Size(300, 91);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sample ButtonEdit";
@@ -115,11 +115,10 @@
             // 
             this.buttonEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            editorButton1.CaptionFont = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            editorButton1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             editorButton2.IsLeft = true;
             editorButton2.Kind = QGEditors.WinForms.ButtonPredefines.Undo;
             editorButton3.Caption = "ABC";
-            editorButton3.CaptionFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             editorButton3.Kind = QGEditors.WinForms.ButtonPredefines.Glyph;
             editorButton3.Width = 31;
             this.buttonEdit1.Buttons.Add(editorButton1);
@@ -127,7 +126,7 @@
             this.buttonEdit1.Buttons.Add(editorButton3);
             this.buttonEdit1.Location = new System.Drawing.Point(22, 42);
             this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Size = new System.Drawing.Size(218, 21);
+            this.buttonEdit1.Size = new System.Drawing.Size(255, 21);
             this.buttonEdit1.TabIndex = 1;
             this.buttonEdit1.Text = "Sample Button Editor";
             // 
@@ -137,7 +136,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(5, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(243, 342);
+            this.groupBox2.Size = new System.Drawing.Size(278, 496);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Appearance";
@@ -151,12 +150,12 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 17);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(237, 322);
+            this.tabControl1.Size = new System.Drawing.Size(272, 476);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.buttonEditAppearance1);
+            this.tabPage1.Controls.Add(this.propertyGrid1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -167,7 +166,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.buttonEditAppearance2);
+            this.tabPage2.Controls.Add(this.propertyGrid2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -178,52 +177,49 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.buttonEditAppearance3);
+            this.tabPage3.Controls.Add(this.propertyGrid3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(229, 296);
+            this.tabPage3.Size = new System.Drawing.Size(264, 450);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Button #3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // buttonEditAppearance1
+            // propertyGrid1
             // 
-            this.buttonEditAppearance1.DataSource = null;
-            this.buttonEditAppearance1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditAppearance1.Location = new System.Drawing.Point(3, 3);
-            this.buttonEditAppearance1.Name = "buttonEditAppearance1";
-            this.buttonEditAppearance1.Size = new System.Drawing.Size(223, 290);
-            this.buttonEditAppearance1.TabIndex = 0;
+            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid1.Location = new System.Drawing.Point(3, 3);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(223, 290);
+            this.propertyGrid1.TabIndex = 1;
             // 
-            // buttonEditAppearance2
+            // propertyGrid2
             // 
-            this.buttonEditAppearance2.DataSource = null;
-            this.buttonEditAppearance2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditAppearance2.Location = new System.Drawing.Point(3, 3);
-            this.buttonEditAppearance2.Name = "buttonEditAppearance2";
-            this.buttonEditAppearance2.Size = new System.Drawing.Size(223, 290);
-            this.buttonEditAppearance2.TabIndex = 0;
+            this.propertyGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid2.Location = new System.Drawing.Point(3, 3);
+            this.propertyGrid2.Name = "propertyGrid2";
+            this.propertyGrid2.Size = new System.Drawing.Size(223, 290);
+            this.propertyGrid2.TabIndex = 0;
             // 
-            // buttonEditAppearance3
+            // propertyGrid3
             // 
-            this.buttonEditAppearance3.DataSource = null;
-            this.buttonEditAppearance3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditAppearance3.Location = new System.Drawing.Point(3, 3);
-            this.buttonEditAppearance3.Name = "buttonEditAppearance3";
-            this.buttonEditAppearance3.Size = new System.Drawing.Size(223, 290);
-            this.buttonEditAppearance3.TabIndex = 0;
+            this.propertyGrid3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid3.Location = new System.Drawing.Point(3, 3);
+            this.propertyGrid3.Name = "propertyGrid3";
+            this.propertyGrid3.Size = new System.Drawing.Size(258, 444);
+            this.propertyGrid3.TabIndex = 0;
             // 
-            // ButtonEditDemo
+            // ButtonEditControlDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 352);
+            this.ClientSize = new System.Drawing.Size(602, 506);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ButtonEditDemo";
+            this.Name = "ButtonEditControlDemo";
             this.Text = "ButtonEditDemo";
             this.splitContainerControl1.Panel1.ResumeLayout(false);
             this.splitContainerControl1.Panel2.ResumeLayout(false);
@@ -249,12 +245,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private ButtonEditAppearance buttonEditAppearance1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TabPage tabPage2;
-        private ButtonEditAppearance buttonEditAppearance2;
         private System.Windows.Forms.TabPage tabPage3;
-        private ButtonEditAppearance buttonEditAppearance3;
+        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.PropertyGrid propertyGrid2;
+        private System.Windows.Forms.PropertyGrid propertyGrid3;
     }
 }

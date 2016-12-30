@@ -21,8 +21,8 @@ namespace QGEditors.WinForms.DEMO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new ButtonEditDemo());
-            Application.Run(new SplitContainerControlDemo());
+            Application.Run(new ButtonEditControlDemo());
+            //Application.Run(new SplitContainerControlDemo());
         }
 
         #endregion
