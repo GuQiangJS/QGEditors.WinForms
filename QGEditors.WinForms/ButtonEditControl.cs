@@ -50,6 +50,7 @@ namespace QGEditors.WinForms
             this.Buttons.CollectionChanged += Buttons_CollectionChanged;
 
             this._buttonTip.AutoPopDelay = 10000;
+            this.Font = QGEditorControl.DefaultFont;
 
             _innerButtons.CollectionChanged += _innerButtons_CollectionChanged;
         }
@@ -66,6 +67,32 @@ namespace QGEditors.WinForms
         #endregion
 
         #region Properties
+
+        /// <summary>
+        /// 获取或设置控件显示的文字的字体。
+        /// </summary>
+        /// <PermissionSet>
+        ///   <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        ///   <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        ///   <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+        ///   <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+        /// </PermissionSet>
+        public override Font Font
+        {
+            get
+            {
+                return base.Font;
+            }
+            set
+            {
+                base.Font = value;
+            }
+        }
+
+        bool ShouldSerializeFont()
+        {
+            return Font != QGEditorControl.DefaultFont;
+        }
 
         /// <summary>
         /// 获取当前编辑器中的按钮的集合。

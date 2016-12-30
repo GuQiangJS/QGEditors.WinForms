@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="PropertyChangedEventArgsEx.cs" />
     <Compile Include="PropertyChangingEventArgsEx.cs" />
+    <Compile Include="QGEditorControl.cs" />
     <Compile Include="SplitContainerControl.cs">
       <SubType>Component</SubType>
     </Compile>

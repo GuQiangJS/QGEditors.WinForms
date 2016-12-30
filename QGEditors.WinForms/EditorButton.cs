@@ -49,7 +49,7 @@ namespace QGEditors.WinForms
         /// <summary>
         /// 标题字体
         /// </summary>
-        private Font _captionFont = Control.DefaultFont;
+        private Font _captionFont = QGEditorControl.DefaultFont;
 
         /// <summary>
         /// 标题尺寸矩形大小（根据Caption属性计算）
@@ -233,7 +233,7 @@ namespace QGEditors.WinForms
         /// 获取或设置与当前按钮关联的文本的字体。
         /// </summary>
         /// <value>
-        /// 要应用于由控件显示的文本的 <see cref="Font"/>。默认为 <see cref="Control.DefaultFont"/> 属性的值。
+        /// 要应用于由控件显示的文本的 <see cref="Font"/>。默认为 <see cref="QGEditorControl.DefaultFont"/> 属性的值。
         /// </value>
         [Localizable(true)]
         public virtual Font CaptionFont
@@ -581,12 +581,12 @@ namespace QGEditors.WinForms
 
         protected void ResetCaptionFont()
         {
-            CaptionFont = Control.DefaultFont;
+            CaptionFont = QGEditorControl.DefaultFont;
         }
 
         protected bool ShouldSerializeCaptionFont()
         {
-            return CaptionFont != Control.DefaultFont;
+            return CaptionFont != QGEditorControl.DefaultFont;
         }
 
         private void SetKind(ButtonPredefines kind)

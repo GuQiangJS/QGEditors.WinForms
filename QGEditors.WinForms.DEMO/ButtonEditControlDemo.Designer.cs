@@ -39,10 +39,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.propertyGrid2 = new System.Windows.Forms.PropertyGrid();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.propertyGrid3 = new System.Windows.Forms.PropertyGrid();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -120,7 +120,7 @@
             editorButton2.Kind = QGEditors.WinForms.ButtonPredefines.Undo;
             editorButton3.Caption = "ABC";
             editorButton3.Kind = QGEditors.WinForms.ButtonPredefines.Glyph;
-            editorButton3.Width = 31;
+            editorButton3.Width = 35;
             this.buttonEdit1.Buttons.Add(editorButton1);
             this.buttonEdit1.Buttons.Add(editorButton2);
             this.buttonEdit1.Buttons.Add(editorButton3);
@@ -159,10 +159,18 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(229, 296);
+            this.tabPage1.Size = new System.Drawing.Size(264, 450);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Button #1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid1.Location = new System.Drawing.Point(3, 3);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(258, 444);
+            this.propertyGrid1.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -170,10 +178,18 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(229, 296);
+            this.tabPage2.Size = new System.Drawing.Size(264, 450);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Button #2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // propertyGrid2
+            // 
+            this.propertyGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid2.Location = new System.Drawing.Point(3, 3);
+            this.propertyGrid2.Name = "propertyGrid2";
+            this.propertyGrid2.Size = new System.Drawing.Size(258, 444);
+            this.propertyGrid2.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -185,22 +201,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Button #3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // propertyGrid1
-            // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid1.Location = new System.Drawing.Point(3, 3);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(223, 290);
-            this.propertyGrid1.TabIndex = 1;
-            // 
-            // propertyGrid2
-            // 
-            this.propertyGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid2.Location = new System.Drawing.Point(3, 3);
-            this.propertyGrid2.Name = "propertyGrid2";
-            this.propertyGrid2.Size = new System.Drawing.Size(223, 290);
-            this.propertyGrid2.TabIndex = 0;
             // 
             // propertyGrid3
             // 
