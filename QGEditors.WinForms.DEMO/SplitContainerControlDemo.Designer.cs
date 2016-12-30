@@ -29,70 +29,103 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplitContainerControlDemo));
-            this.splitContainerControl2 = new QGEditors.WinForms.SplitContainerControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.splitContainerControl1 = new QGEditors.WinForms.SplitContainerControl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.splitContainerControl2 = new QGEditors.WinForms.SplitContainerControl();
             this.splitContainerControl3 = new QGEditors.WinForms.SplitContainerControl();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            this.splitContainerControl1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            this.splitContainerControl1.Panel2.SuspendLayout();
-            this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
+            this.splitContainerControl3.Panel1.SuspendLayout();
+            this.splitContainerControl3.Panel2.SuspendLayout();
             this.splitContainerControl3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitContainerControl2
+            // groupBox1
             // 
-            this.splitContainerControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainerControl2.Location = new System.Drawing.Point(0, 324);
-            this.splitContainerControl2.Name = "splitContainerControl2";
-            this.splitContainerControl2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainerControl2.Size = new System.Drawing.Size(585, 125);
-            this.splitContainerControl2.SplitterDistance = 62;
-            this.splitContainerControl2.TabIndex = 1;
+            this.groupBox1.Controls.Add(this.splitContainerControl1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(575, 218);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Default SplitterImage";
             // 
             // splitContainerControl1
             // 
-            this.splitContainerControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl1.Location = new System.Drawing.Point(3, 18);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainerControl1.Size = new System.Drawing.Size(569, 197);
+            this.splitContainerControl1.SplitterDistance = 183;
+            this.splitContainerControl1.TabIndex = 1;
             // 
-            // splitContainerControl1.Panel2
+            // groupBox2
             // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl3);
-            this.splitContainerControl1.Size = new System.Drawing.Size(585, 318);
-            this.splitContainerControl1.SplitterDistance = 189;
-            this.splitContainerControl1.TabIndex = 0;
+            this.groupBox2.Controls.Add(this.splitContainerControl2);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(575, 215);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Customer SplitterImage";
+            // 
+            // splitContainerControl2
+            // 
+            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl2.Location = new System.Drawing.Point(3, 18);
+            this.splitContainerControl2.Name = "splitContainerControl2";
+            this.splitContainerControl2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainerControl2.Size = new System.Drawing.Size(569, 194);
+            this.splitContainerControl2.SplitterDistance = 95;
+            this.splitContainerControl2.SplitterImage = ((System.Drawing.Image)(resources.GetObject("splitContainerControl2.SplitterImage")));
+            this.splitContainerControl2.TabIndex = 2;
             // 
             // splitContainerControl3
             // 
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl3.Location = new System.Drawing.Point(5, 5);
             this.splitContainerControl3.Name = "splitContainerControl3";
             this.splitContainerControl3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.splitContainerControl3.Size = new System.Drawing.Size(392, 318);
-            this.splitContainerControl3.SplitterDistance = 130;
-            this.splitContainerControl3.SplitterImage = ((System.Drawing.Image)(resources.GetObject("splitContainerControl3.SplitterImage")));
-            this.splitContainerControl3.SplitterImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.splitContainerControl3.TabIndex = 0;
+            // 
+            // splitContainerControl3.Panel1
+            // 
+            this.splitContainerControl3.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainerControl3.Panel2
+            // 
+            this.splitContainerControl3.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainerControl3.Size = new System.Drawing.Size(575, 437);
+            this.splitContainerControl3.SplitterDistance = 218;
+            this.splitContainerControl3.TabIndex = 4;
             // 
             // SplitContainerControlDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 447);
-            this.Controls.Add(this.splitContainerControl2);
-            this.Controls.Add(this.splitContainerControl1);
+            this.Controls.Add(this.splitContainerControl3);
             this.Name = "SplitContainerControlDemo";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
-            this.splitContainerControl2.ResumeLayout(false);
-            this.splitContainerControl1.Panel2.ResumeLayout(false);
+            this.Padding = new System.Windows.Forms.Padding(5);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SplitContainerControlDemo";
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
+            this.splitContainerControl2.ResumeLayout(false);
+            this.splitContainerControl3.Panel1.ResumeLayout(false);
+            this.splitContainerControl3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
             this.splitContainerControl3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -100,8 +133,9 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.GroupBox groupBox1;
         private SplitContainerControl splitContainerControl1;
+        private System.Windows.Forms.GroupBox groupBox2;
         private SplitContainerControl splitContainerControl2;
         private SplitContainerControl splitContainerControl3;
     }

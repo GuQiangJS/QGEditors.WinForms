@@ -122,7 +122,7 @@
             this.buttonEditControl23.Buttons.Add(editorButton1);
             this.buttonEditControl23.Location = new System.Drawing.Point(255, 95);
             this.buttonEditControl23.Name = "buttonEditControl23";
-            this.buttonEditControl23.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl23.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl23.TabIndex = 25;
             this.buttonEditControl23.Text = "Attachment";
             // 
@@ -132,7 +132,7 @@
             this.buttonEditControl24.Buttons.Add(editorButton2);
             this.buttonEditControl24.Location = new System.Drawing.Point(255, 149);
             this.buttonEditControl24.Name = "buttonEditControl24";
-            this.buttonEditControl24.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl24.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl24.TabIndex = 24;
             this.buttonEditControl24.Text = "Lock";
             // 
@@ -142,7 +142,7 @@
             this.buttonEditControl25.Buttons.Add(editorButton3);
             this.buttonEditControl25.Location = new System.Drawing.Point(477, 95);
             this.buttonEditControl25.Name = "buttonEditControl25";
-            this.buttonEditControl25.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl25.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl25.TabIndex = 23;
             this.buttonEditControl25.Text = "UnLock";
             // 
@@ -152,7 +152,7 @@
             this.buttonEditControl26.Buttons.Add(editorButton4);
             this.buttonEditControl26.Location = new System.Drawing.Point(255, 122);
             this.buttonEditControl26.Name = "buttonEditControl26";
-            this.buttonEditControl26.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl26.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl26.TabIndex = 22;
             this.buttonEditControl26.Text = "File";
             // 
@@ -162,7 +162,7 @@
             this.buttonEditControl22.Buttons.Add(editorButton5);
             this.buttonEditControl22.Location = new System.Drawing.Point(33, 95);
             this.buttonEditControl22.Name = "buttonEditControl22";
-            this.buttonEditControl22.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl22.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl22.TabIndex = 21;
             this.buttonEditControl22.Text = "Backward";
             // 
@@ -172,7 +172,7 @@
             this.buttonEditControl21.Buttons.Add(editorButton6);
             this.buttonEditControl21.Location = new System.Drawing.Point(33, 122);
             this.buttonEditControl21.Name = "buttonEditControl21";
-            this.buttonEditControl21.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl21.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl21.TabIndex = 20;
             this.buttonEditControl21.Text = "Delete";
             // 
@@ -182,7 +182,7 @@
             this.buttonEditControl20.Buttons.Add(editorButton7);
             this.buttonEditControl20.Location = new System.Drawing.Point(33, 149);
             this.buttonEditControl20.Name = "buttonEditControl20";
-            this.buttonEditControl20.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl20.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl20.TabIndex = 19;
             this.buttonEditControl20.Text = "Down";
             // 
@@ -192,7 +192,7 @@
             this.buttonEditControl19.Buttons.Add(editorButton8);
             this.buttonEditControl19.Location = new System.Drawing.Point(588, 68);
             this.buttonEditControl19.Name = "buttonEditControl19";
-            this.buttonEditControl19.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl19.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl19.TabIndex = 18;
             this.buttonEditControl19.Text = "Edit";
             // 
@@ -202,7 +202,7 @@
             this.buttonEditControl18.Buttons.Add(editorButton9);
             this.buttonEditControl18.Location = new System.Drawing.Point(588, 95);
             this.buttonEditControl18.Name = "buttonEditControl18";
-            this.buttonEditControl18.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl18.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl18.TabIndex = 17;
             this.buttonEditControl18.Text = "Favorite";
             // 
@@ -212,7 +212,7 @@
             this.buttonEditControl17.Buttons.Add(editorButton10);
             this.buttonEditControl17.Location = new System.Drawing.Point(144, 176);
             this.buttonEditControl17.Name = "buttonEditControl17";
-            this.buttonEditControl17.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl17.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl17.TabIndex = 16;
             this.buttonEditControl17.Text = "Forward";
             // 
@@ -222,7 +222,7 @@
             this.buttonEditControl16.Buttons.Add(editorButton11);
             this.buttonEditControl16.Location = new System.Drawing.Point(366, 176);
             this.buttonEditControl16.Name = "buttonEditControl16";
-            this.buttonEditControl16.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl16.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl16.TabIndex = 15;
             this.buttonEditControl16.Text = "Help";
             // 
@@ -232,7 +232,7 @@
             this.buttonEditControl15.Buttons.Add(editorButton12);
             this.buttonEditControl15.Location = new System.Drawing.Point(366, 68);
             this.buttonEditControl15.Name = "buttonEditControl15";
-            this.buttonEditControl15.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl15.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl15.TabIndex = 14;
             this.buttonEditControl15.Text = "Left";
             // 
@@ -242,7 +242,7 @@
             this.buttonEditControl14.Buttons.Add(editorButton13);
             this.buttonEditControl14.Location = new System.Drawing.Point(33, 176);
             this.buttonEditControl14.Name = "buttonEditControl14";
-            this.buttonEditControl14.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl14.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl14.TabIndex = 13;
             this.buttonEditControl14.Text = "Loop";
             // 
@@ -252,7 +252,7 @@
             this.buttonEditControl13.Buttons.Add(editorButton14);
             this.buttonEditControl13.Location = new System.Drawing.Point(477, 122);
             this.buttonEditControl13.Name = "buttonEditControl13";
-            this.buttonEditControl13.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl13.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl13.TabIndex = 12;
             this.buttonEditControl13.Text = "Minus";
             // 
@@ -262,7 +262,7 @@
             this.buttonEditControl12.Buttons.Add(editorButton15);
             this.buttonEditControl12.Location = new System.Drawing.Point(477, 149);
             this.buttonEditControl12.Name = "buttonEditControl12";
-            this.buttonEditControl12.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl12.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl12.TabIndex = 11;
             this.buttonEditControl12.Text = "Ok";
             // 
@@ -272,7 +272,7 @@
             this.buttonEditControl11.Buttons.Add(editorButton16);
             this.buttonEditControl11.Location = new System.Drawing.Point(144, 68);
             this.buttonEditControl11.Name = "buttonEditControl11";
-            this.buttonEditControl11.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl11.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl11.TabIndex = 10;
             this.buttonEditControl11.Text = "Option";
             // 
@@ -282,7 +282,7 @@
             this.buttonEditControl10.Buttons.Add(editorButton17);
             this.buttonEditControl10.Location = new System.Drawing.Point(144, 95);
             this.buttonEditControl10.Name = "buttonEditControl10";
-            this.buttonEditControl10.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl10.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl10.TabIndex = 9;
             this.buttonEditControl10.Text = "Pause";
             // 
@@ -292,7 +292,7 @@
             this.buttonEditControl9.Buttons.Add(editorButton18);
             this.buttonEditControl9.Location = new System.Drawing.Point(144, 122);
             this.buttonEditControl9.Name = "buttonEditControl9";
-            this.buttonEditControl9.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl9.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl9.TabIndex = 8;
             this.buttonEditControl9.Text = "Play";
             // 
@@ -302,7 +302,7 @@
             this.buttonEditControl8.Buttons.Add(editorButton19);
             this.buttonEditControl8.Location = new System.Drawing.Point(144, 149);
             this.buttonEditControl8.Name = "buttonEditControl8";
-            this.buttonEditControl8.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl8.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl8.TabIndex = 7;
             this.buttonEditControl8.Text = "Plus";
             // 
@@ -312,7 +312,7 @@
             this.buttonEditControl7.Buttons.Add(editorButton20);
             this.buttonEditControl7.Location = new System.Drawing.Point(588, 122);
             this.buttonEditControl7.Name = "buttonEditControl7";
-            this.buttonEditControl7.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl7.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl7.TabIndex = 6;
             this.buttonEditControl7.Text = "Redo";
             // 
@@ -322,7 +322,7 @@
             this.buttonEditControl6.Buttons.Add(editorButton21);
             this.buttonEditControl6.Location = new System.Drawing.Point(588, 149);
             this.buttonEditControl6.Name = "buttonEditControl6";
-            this.buttonEditControl6.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl6.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl6.TabIndex = 5;
             this.buttonEditControl6.Text = "Right";
             // 
@@ -332,7 +332,7 @@
             this.buttonEditControl5.Buttons.Add(editorButton22);
             this.buttonEditControl5.Location = new System.Drawing.Point(366, 122);
             this.buttonEditControl5.Name = "buttonEditControl5";
-            this.buttonEditControl5.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl5.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl5.TabIndex = 4;
             this.buttonEditControl5.Text = "Search";
             // 
@@ -342,7 +342,7 @@
             this.buttonEditControl4.Buttons.Add(editorButton23);
             this.buttonEditControl4.Location = new System.Drawing.Point(477, 68);
             this.buttonEditControl4.Name = "buttonEditControl4";
-            this.buttonEditControl4.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl4.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl4.TabIndex = 3;
             this.buttonEditControl4.Text = "Undo";
             // 
@@ -352,7 +352,7 @@
             this.buttonEditControl3.Buttons.Add(editorButton24);
             this.buttonEditControl3.Location = new System.Drawing.Point(255, 68);
             this.buttonEditControl3.Name = "buttonEditControl3";
-            this.buttonEditControl3.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl3.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl3.TabIndex = 2;
             this.buttonEditControl3.Text = "AT";
             // 
@@ -362,7 +362,7 @@
             this.buttonEditControl2.Buttons.Add(editorButton25);
             this.buttonEditControl2.Location = new System.Drawing.Point(366, 149);
             this.buttonEditControl2.Name = "buttonEditControl2";
-            this.buttonEditControl2.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl2.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl2.TabIndex = 1;
             this.buttonEditControl2.Text = "Trash";
             // 
@@ -371,7 +371,7 @@
             this.buttonEditControl1.Buttons.Add(editorButton26);
             this.buttonEditControl1.Location = new System.Drawing.Point(33, 68);
             this.buttonEditControl1.Name = "buttonEditControl1";
-            this.buttonEditControl1.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl1.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl1.TabIndex = 0;
             this.buttonEditControl1.Text = "Elipsis";
             // 
@@ -381,7 +381,7 @@
             this.buttonEditControl27.Buttons.Add(editorButton27);
             this.buttonEditControl27.Location = new System.Drawing.Point(255, 176);
             this.buttonEditControl27.Name = "buttonEditControl27";
-            this.buttonEditControl27.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl27.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl27.TabIndex = 27;
             this.buttonEditControl27.Text = "Mail";
             // 
@@ -391,7 +391,7 @@
             this.buttonEditControl28.Buttons.Add(editorButton28);
             this.buttonEditControl28.Location = new System.Drawing.Point(366, 95);
             this.buttonEditControl28.Name = "buttonEditControl28";
-            this.buttonEditControl28.Size = new System.Drawing.Size(105, 21);
+            this.buttonEditControl28.Size = new System.Drawing.Size(105, 22);
             this.buttonEditControl28.TabIndex = 26;
             this.buttonEditControl28.Text = "Save";
             // 
@@ -456,7 +456,7 @@
             this.buttonEditControl29.Buttons.Add(editorButton57);
             this.buttonEditControl29.Location = new System.Drawing.Point(33, 41);
             this.buttonEditControl29.Name = "buttonEditControl29";
-            this.buttonEditControl29.Size = new System.Drawing.Size(660, 21);
+            this.buttonEditControl29.Size = new System.Drawing.Size(660, 22);
             this.buttonEditControl29.TabIndex = 28;
             // 
             // ButtonPredefinesDemo
@@ -494,6 +494,7 @@
             this.Controls.Add(this.buttonEditControl2);
             this.Controls.Add(this.buttonEditControl1);
             this.Name = "ButtonPredefinesDemo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ButtonPredefinesDemo";
             this.ResumeLayout(false);
             this.PerformLayout();

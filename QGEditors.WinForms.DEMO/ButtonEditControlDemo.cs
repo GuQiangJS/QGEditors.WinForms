@@ -40,5 +40,10 @@ namespace QGEditors.WinForms.DEMO
         }
 
         #endregion
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            new ButtonPredefinesDemo().ShowDialog();
+        }
     }
 }

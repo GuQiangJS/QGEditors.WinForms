@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            QGEditors.WinForms.EditorButton editorButton1 = new QGEditors.WinForms.EditorButton();
-            QGEditors.WinForms.EditorButton editorButton2 = new QGEditors.WinForms.EditorButton();
-            QGEditors.WinForms.EditorButton editorButton3 = new QGEditors.WinForms.EditorButton();
+            QGEditors.WinForms.EditorButton editorButton7 = new QGEditors.WinForms.EditorButton();
+            QGEditors.WinForms.EditorButton editorButton8 = new QGEditors.WinForms.EditorButton();
+            QGEditors.WinForms.EditorButton editorButton9 = new QGEditors.WinForms.EditorButton();
             this.splitContainerControl1 = new QGEditors.WinForms.SplitContainerControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -44,6 +44,7 @@
             this.propertyGrid2 = new System.Windows.Forms.PropertyGrid();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.propertyGrid3 = new System.Windows.Forms.PropertyGrid();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
             this.splitContainerControl1.Panel2.SuspendLayout();
@@ -82,6 +83,7 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.linkLabel1);
             this.groupBox3.Controls.Add(this.richTextBox1);
             this.groupBox3.Location = new System.Drawing.Point(6, 102);
             this.groupBox3.Name = "groupBox3";
@@ -92,10 +94,12 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(3, 17);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(293, 376);
+            this.richTextBox1.Size = new System.Drawing.Size(293, 336);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -115,18 +119,18 @@
             // 
             this.buttonEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            editorButton1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            editorButton2.IsLeft = true;
-            editorButton2.Kind = QGEditors.WinForms.ButtonPredefines.Undo;
-            editorButton3.Caption = "ABC";
-            editorButton3.Kind = QGEditors.WinForms.ButtonPredefines.Glyph;
-            editorButton3.Width = 35;
-            this.buttonEdit1.Buttons.Add(editorButton1);
-            this.buttonEdit1.Buttons.Add(editorButton2);
-            this.buttonEdit1.Buttons.Add(editorButton3);
+            editorButton7.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            editorButton8.IsLeft = true;
+            editorButton8.Kind = QGEditors.WinForms.ButtonPredefines.Undo;
+            editorButton9.Caption = "ABC";
+            editorButton9.Kind = QGEditors.WinForms.ButtonPredefines.Glyph;
+            editorButton9.Width = 35;
+            this.buttonEdit1.Buttons.Add(editorButton7);
+            this.buttonEdit1.Buttons.Add(editorButton8);
+            this.buttonEdit1.Buttons.Add(editorButton9);
             this.buttonEdit1.Location = new System.Drawing.Point(22, 42);
             this.buttonEdit1.Name = "buttonEdit1";
-            this.buttonEdit1.Size = new System.Drawing.Size(255, 21);
+            this.buttonEdit1.Size = new System.Drawing.Size(255, 22);
             this.buttonEdit1.TabIndex = 1;
             this.buttonEdit1.Text = "Sample Button Editor";
             // 
@@ -210,6 +214,18 @@
             this.propertyGrid3.Size = new System.Drawing.Size(258, 444);
             this.propertyGrid3.TabIndex = 0;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.linkLabel1.Location = new System.Drawing.Point(6, 365);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(134, 14);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "ButtonPredefinesDemo";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ButtonEditControlDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -220,12 +236,14 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ButtonEditControlDemo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ButtonEditDemo";
             this.splitContainerControl1.Panel1.ResumeLayout(false);
             this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -252,5 +270,6 @@
         private System.Windows.Forms.PropertyGrid propertyGrid1;
         private System.Windows.Forms.PropertyGrid propertyGrid2;
         private System.Windows.Forms.PropertyGrid propertyGrid3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

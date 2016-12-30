@@ -4,6 +4,8 @@
  *  ALL RIGHTS RESERVED
 */
 
+using QGEditors.WinForms.DEMO.Properties;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace QGEditors.WinForms.DEMO
