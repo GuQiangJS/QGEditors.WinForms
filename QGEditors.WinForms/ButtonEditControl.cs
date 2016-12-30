@@ -172,8 +172,8 @@ namespace QGEditors.WinForms
             //文字高度偏移量
             int textTopMargin = 0;
 
-            int width = editorBtn.CaptionSize.Width.ToInt32();
-            int height = editorBtn.CaptionSize.Height.ToInt32();
+            int width = editorBtn.CaptionSize.Width;
+            int height = editorBtn.CaptionSize.Height;
 
             int top = ((btn.ClientSize.Height - height) / 2) + textTopMargin;
             int left = (btn.ClientSize.Width - width) / 2;
@@ -232,7 +232,7 @@ namespace QGEditors.WinForms
             if (editorBtn != null && btn != null)
             {
                 btn.Enabled = editorBtn.Enabled;
-                btn.Width = editorBtn.Width;
+                btn.Width = editorBtn.Width + btn.Padding.Left + btn.Padding.Right;
                 btn.Cursor = editorBtn.Cursor;
                 btn.Visible = editorBtn.Visible;
                 if (string.IsNullOrEmpty(editorBtn.Name))

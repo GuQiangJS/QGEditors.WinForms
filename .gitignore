@@ -253,3 +253,4 @@ paket-files/
 /QGEditors.Output.Debug
 /QGEditors.Output.Release
 /QGEditors.Output.WinForms.Demo
+/QGEditors.Output.Doc

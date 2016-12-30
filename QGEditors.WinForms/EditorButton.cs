@@ -487,9 +487,9 @@ namespace QGEditors.WinForms
                 int v = _defaultWidth;
                 if (this.Kind == ButtonPredefines.Glyph && this.Image == null)
                 {
-                    if (_captionSize != SizeF.Empty)
+                    if (this.CaptionSizeF != SizeF.Empty)
                     {
-                        v = (int)_captionSize.Width + 9;
+                        v = this.CaptionSize.Width;
                     }
                 }
                 v = (v > value) ? v : value;
@@ -526,11 +526,25 @@ namespace QGEditors.WinForms
             }
         }
 
-        internal SizeF CaptionSize
+        /// <summary>
+        /// 获取与当前按钮关联的文本的大小。
+        /// </summary>
+        public SizeF CaptionSizeF
         {
             get
             {
                 return _captionSize;
+            }
+        }
+
+        /// <summary>
+        /// 获取与当前按钮关联的文本的大小。
+        /// </summary>
+        public Size CaptionSize
+        {
+            get
+            {
+                return Size.Ceiling(CaptionSizeF);
             }
         }
 
