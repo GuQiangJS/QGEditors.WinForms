@@ -85,6 +85,7 @@
             QGEditors.WinForms.EditorButton editorButton55 = new QGEditors.WinForms.EditorButton();
             QGEditors.WinForms.EditorButton editorButton56 = new QGEditors.WinForms.EditorButton();
             QGEditors.WinForms.EditorButton editorButton57 = new QGEditors.WinForms.EditorButton();
+            QGEditors.WinForms.EditorButton editorButton58 = new QGEditors.WinForms.EditorButton();
             this.buttonEditControl23 = new QGEditors.WinForms.ButtonEditControl();
             this.buttonEditControl24 = new QGEditors.WinForms.ButtonEditControl();
             this.buttonEditControl25 = new QGEditors.WinForms.ButtonEditControl();
@@ -114,6 +115,7 @@
             this.buttonEditControl27 = new QGEditors.WinForms.ButtonEditControl();
             this.buttonEditControl28 = new QGEditors.WinForms.ButtonEditControl();
             this.buttonEditControl29 = new QGEditors.WinForms.ButtonEditControl();
+            this.buttonEditControl30 = new QGEditors.WinForms.ButtonEditControl();
             this.SuspendLayout();
             // 
             // buttonEditControl23
@@ -459,11 +461,22 @@
             this.buttonEditControl29.Size = new System.Drawing.Size(660, 22);
             this.buttonEditControl29.TabIndex = 28;
             // 
+            // buttonEditControl30
+            // 
+            editorButton58.Kind = QGEditors.WinForms.ButtonPredefines.Up;
+            this.buttonEditControl30.Buttons.Add(editorButton58);
+            this.buttonEditControl30.Location = new System.Drawing.Point(477, 176);
+            this.buttonEditControl30.Name = "buttonEditControl30";
+            this.buttonEditControl30.Size = new System.Drawing.Size(105, 22);
+            this.buttonEditControl30.TabIndex = 29;
+            this.buttonEditControl30.Text = "Up";
+            // 
             // ButtonPredefinesDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 222);
+            this.Controls.Add(this.buttonEditControl30);
             this.Controls.Add(this.buttonEditControl29);
             this.Controls.Add(this.buttonEditControl27);
             this.Controls.Add(this.buttonEditControl28);
@@ -532,5 +545,6 @@
         private ButtonEditControl buttonEditControl27;
         private ButtonEditControl buttonEditControl28;
         private ButtonEditControl buttonEditControl29;
+        private ButtonEditControl buttonEditControl30;
     }
 }
