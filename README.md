@@ -13,6 +13,13 @@
 
 <span id="ButtonEditControl"></span>
 ### ButtonEditControl
+
+ButtonEditControl编辑器是文本编辑器，允许您在编辑框中显示无限数量的按钮。
+
+ButtonEditControl类提供Buttons属性来访问编辑器中显示的按钮集合。每个按钮都由EditorButton对象表示，该对象提供了一些指定按钮的外观，快捷方式，可见性，提示文本等属性。
+
+通过处理ButtonEditControl.ButtonClick事件来响应点击编辑器按钮事件。
+
 ![ButtonEditControl](https://github.com/GuQiangJS/QGEditors.WinForms/blob/master/src/Images/Previews/ButtonEditControl.png?raw=true)
 
 #### Example:
