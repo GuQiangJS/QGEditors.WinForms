@@ -11,11 +11,11 @@
 编译 QGEditors.WinForms.DocBuilders 相关帮助文档项目时需要使用 [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB/releases)。
 
 
-## ButtonEditControl
 <span id="ButtonEditControl"></span>
+### ButtonEditControl
 ![ButtonEditControl](https://github.com/GuQiangJS/QGEditors.WinForms/blob/master/src/Images/Previews/ButtonEditControl.png?raw=true)
 
-### Example:
+#### Example:
 
 下面的代码创建一个 **ButtonEditControl** 实例，并将其放在一个名为 panel1 的 Panel 中。同时向 ButtonEditControl 实例中添加两个靠右顺序排列的按钮，第一个按钮使用默认的按钮类型（省略号），另一个按钮则改为 (ButtonPredefines.Delete) 。
 代码执行的结果显示如下︰
