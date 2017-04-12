@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AT 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Attachment 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Backward 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Button 属性" Url="html/a8355693-a826-56c6-35a1-fd9157b03b6b.htm" />
+  <HelpKINode Title="ButtonClick 事件" Url="html/ab856a95-1245-530c-fd7b-29cb729086c5.htm" />
+  <HelpKINode Title="ButtonEditControl 类">
+    <HelpKINode Title="ButtonEditControl 类" Url="html/a6572857-9fe9-24f0-f172-fef867725270.htm" />
+    <HelpKINode Title="事件" Url="html/dfe7837c-8eff-f873-8b0e-a99126f4e511.htm" />
+    <HelpKINode Title="关于 ButtonEditControl 类" Url="html/a6572857-9fe9-24f0-f172-fef867725270.htm" />
+    <HelpKINode Title="属性" Url="html/0e516d42-c718-64e9-5bc7-31c6f465b863.htm" />
+    <HelpKINode Title="构造函数" Url="html/b4e34e2f-8839-1f24-695f-e37a78cd8069.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ButtonEditControl.ButtonClick 事件" Url="html/ab856a95-1245-530c-fd7b-29cb729086c5.htm" />
+  <HelpKINode Title="ButtonEditControl.ButtonEditControl 构造函数" Url="html/b4e34e2f-8839-1f24-695f-e37a78cd8069.htm" />
+  <HelpKINode Title="ButtonEditControl.Buttons 属性" Url="html/bd36099d-cf64-18bc-2a8f-ec8493f9cd6b.htm" />
+  <HelpKINode Title="ButtonEditControl.Font 属性" Url="html/8d80b6cb-6fe6-c2fb-1e6b-cc2b9f9899ce.htm" />
+  <HelpKINode Title="ButtonPredefines 枚举" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="ButtonPressedEventArgs 类">
+    <HelpKINode Title="ButtonPressedEventArgs 类" Url="html/8d1b9975-3d37-58d2-8e15-7995b766bae2.htm" />
+    <HelpKINode Title="关于 ButtonPressedEventArgs 类" Url="html/8d1b9975-3d37-58d2-8e15-7995b766bae2.htm" />
+    <HelpKINode Title="属性" Url="html/7a6df82b-c92d-bcab-31d0-965c8c2dbfd5.htm" />
+    <HelpKINode Title="构造函数" Url="html/6a98f2cb-4e37-702f-70c4-3a07ff2e215a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ButtonPressedEventArgs.Button 属性" Url="html/a8355693-a826-56c6-35a1-fd9157b03b6b.htm" />
+  <HelpKINode Title="ButtonPressedEventArgs.ButtonPressedEventArgs 构造函数" Url="html/6a98f2cb-4e37-702f-70c4-3a07ff2e215a.htm" />
+  <HelpKINode Title="ButtonPressedEventHandler 委托" Url="html/b4ead5c4-c642-e149-6f72-452b21e77a16.htm" />
+  <HelpKINode Title="Buttons 属性" Url="html/bd36099d-cf64-18bc-2a8f-ec8493f9cd6b.htm" />
+  <HelpKINode Title="Cancel 属性" Url="html/371dc866-9e4d-a886-7f22-e5450a2f9245.htm" />
+  <HelpKINode Title="Caption 属性" Url="html/4c3be27a-6c6f-a1c0-6966-29144844f9ed.htm" />
+  <HelpKINode Title="CaptionColor 属性" Url="html/800aa9c1-15c1-5c46-ee94-6e1709094679.htm" />
+  <HelpKINode Title="CaptionFont 属性" Url="html/1aec9814-5983-bb21-9c2f-1c43c8e740b0.htm" />
+  <HelpKINode Title="CaptionSize 属性" Url="html/b85f3943-26ec-4afc-81a8-739a8e965bda.htm" />
+  <HelpKINode Title="CaptionSizeF 属性" Url="html/ed902d5f-8675-30b2-1a17-8262d8aaf818.htm" />
+  <HelpKINode Title="Cursor 属性" Url="html/72b5675f-0873-d921-baf8-a7c92ac76bc8.htm" />
+  <HelpKINode Title="DefaultFont 属性" Url="html/02ef9260-8b16-966e-9852-7d746858eaae.htm" />
+  <HelpKINode Title="Delete 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Down 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Edit 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="EditorButton 类">
+    <HelpKINode Title="EditorButton 类" Url="html/476ed614-c272-e677-1765-ed56479f55bd.htm" />
+    <HelpKINode Title="事件" Url="html/173a4697-1eaf-b831-ef32-59a67f442a0c.htm" />
+    <HelpKINode Title="关于 EditorButton 类" Url="html/476ed614-c272-e677-1765-ed56479f55bd.htm" />
+    <HelpKINode Title="属性" Url="html/af2e51c1-18e1-1f8c-3d50-2a8b6a7d391d.htm" />
+    <HelpKINode Title="方法" Url="html/4a5a574e-e573-5eaa-0010-1bcbd89c237a.htm" />
+    <HelpKINode Title="构造函数" Url="html/324fab15-6b63-1ffc-35d8-614603f1b6ab.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EditorButton.Caption 属性" Url="html/4c3be27a-6c6f-a1c0-6966-29144844f9ed.htm" />
+  <HelpKINode Title="EditorButton.CaptionColor 属性" Url="html/800aa9c1-15c1-5c46-ee94-6e1709094679.htm" />
+  <HelpKINode Title="EditorButton.CaptionFont 属性" Url="html/1aec9814-5983-bb21-9c2f-1c43c8e740b0.htm" />
+  <HelpKINode Title="EditorButton.CaptionSize 属性" Url="html/b85f3943-26ec-4afc-81a8-739a8e965bda.htm" />
+  <HelpKINode Title="EditorButton.CaptionSizeF 属性" Url="html/ed902d5f-8675-30b2-1a17-8262d8aaf818.htm" />
+  <HelpKINode Title="EditorButton.Cursor 属性" Url="html/72b5675f-0873-d921-baf8-a7c92ac76bc8.htm" />
+  <HelpKINode Title="EditorButton.EditorButton 构造函数" Url="html/324fab15-6b63-1ffc-35d8-614603f1b6ab.htm" />
+  <HelpKINode Title="EditorButton.Enabled 属性" Url="html/c161bd7b-81e2-5ba9-f7e6-a80f0660f06d.htm" />
+  <HelpKINode Title="EditorButton.Image 属性" Url="html/8319a244-eca5-8c97-7fe9-351b397f6ebe.htm" />
+  <HelpKINode Title="EditorButton.ImageAlign 属性" Url="html/ea72a19f-2eae-0abf-4287-f278b930c393.htm" />
+  <HelpKINode Title="EditorButton.IsLeft 属性" Url="html/238f0b8e-54f8-976c-746a-5a6e86153670.htm" />
+  <HelpKINode Title="EditorButton.Kind 属性" Url="html/2e281778-2253-dbcb-04b3-a52f592a2ff9.htm" />
+  <HelpKINode Title="EditorButton.Name 属性" Url="html/44ef4a20-dce3-91d1-d739-ef2245d5aa95.htm" />
+  <HelpKINode Title="EditorButton.PropertyChanged 事件" Url="html/47ec9dad-e84d-107f-5b3f-ac28ee4ab132.htm" />
+  <HelpKINode Title="EditorButton.PropertyChanging 事件" Url="html/06c3b240-8ced-2887-4507-adc3c0eaec96.htm" />
+  <HelpKINode Title="EditorButton.ShortcutKeys 属性" Url="html/f30474ea-c56b-d696-2895-3f7e9d29091c.htm" />
+  <HelpKINode Title="EditorButton.ToolTip 属性" Url="html/12273374-d456-0dd7-511f-825cd5a6aa84.htm" />
+  <HelpKINode Title="EditorButton.ToString 方法" Url="html/67d40f8f-c0bb-d11d-023e-91c38d57c761.htm" />
+  <HelpKINode Title="EditorButton.Visible 属性" Url="html/0c0a8b1c-b361-cff9-5282-e54c2744bd71.htm" />
+  <HelpKINode Title="EditorButton.Width 属性" Url="html/52fd4069-0963-b8d1-96e7-3af1c92b6ed4.htm" />
+  <HelpKINode Title="EditorButtonCollection 类">
+    <HelpKINode Title="EditorButtonCollection 类" Url="html/07f816df-7c76-3afe-226a-3ed6d27ee719.htm" />
+    <HelpKINode Title="关于 EditorButtonCollection 类" Url="html/07f816df-7c76-3afe-226a-3ed6d27ee719.htm" />
+    <HelpKINode Title="构造函数" Url="html/12872490-876e-d1d7-9dc2-30882f3ea0a5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EditorButtonCollection.EditorButtonCollection 构造函数" Url="html/12872490-876e-d1d7-9dc2-30882f3ea0a5.htm" />
+  <HelpKINode Title="Elipsis 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Enabled 属性" Url="html/c161bd7b-81e2-5ba9-f7e6-a80f0660f06d.htm" />
+  <HelpKINode Title="Favorite 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="File 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Font 属性" Url="html/8d80b6cb-6fe6-c2fb-1e6b-cc2b9f9899ce.htm" />
+  <HelpKINode Title="Forward 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Glyph 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Help 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Image 属性" Url="html/8319a244-eca5-8c97-7fe9-351b397f6ebe.htm" />
+  <HelpKINode Title="ImageAlign 属性" Url="html/ea72a19f-2eae-0abf-4287-f278b930c393.htm" />
+  <HelpKINode Title="IsLeft 属性" Url="html/238f0b8e-54f8-976c-746a-5a6e86153670.htm" />
+  <HelpKINode Title="Kind 属性" Url="html/2e281778-2253-dbcb-04b3-a52f592a2ff9.htm" />
+  <HelpKINode Title="Left 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Lock 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Loop 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Mail 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Minus 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Name 属性" Url="html/44ef4a20-dce3-91d1-d739-ef2245d5aa95.htm" />
+  <HelpKINode Title="NewValue 属性" Url="html/a706a383-dd8c-b698-7e3c-91f4c0a1f821.htm" />
+  <HelpKINode Title="Ok 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="OldValue 属性" Url="html/bfb41349-6b8d-0e6a-57d4-ea9b3989c5d8.htm" />
+  <HelpKINode Title="Option 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Pause 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Play 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Plus 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="PropertyChanged 事件">
+    <HelpKINode Title="EditorButton.PropertyChanged 事件" Url="html/47ec9dad-e84d-107f-5b3f-ac28ee4ab132.htm" />
+    <HelpKINode Title="SplitContainerControl.PropertyChanged 事件" Url="html/49a4a266-82b8-3897-e2aa-a95702d199b7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyChangedEventArgsEx 类">
+    <HelpKINode Title="PropertyChangedEventArgsEx 类" Url="html/407217f2-a227-9777-d093-e4929796f737.htm" />
+    <HelpKINode Title="关于 PropertyChangedEventArgsEx 类" Url="html/407217f2-a227-9777-d093-e4929796f737.htm" />
+    <HelpKINode Title="属性" Url="html/7d6dbd0c-7a4b-5e4f-e716-7a44c0cc10d5.htm" />
+    <HelpKINode Title="构造函数" Url="html/b101cf13-8e53-76a3-9aab-e167d162666e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyChangedEventArgsEx.NewValue 属性" Url="html/a706a383-dd8c-b698-7e3c-91f4c0a1f821.htm" />
+  <HelpKINode Title="PropertyChangedEventArgsEx.OldValue 属性" Url="html/bfb41349-6b8d-0e6a-57d4-ea9b3989c5d8.htm" />
+  <HelpKINode Title="PropertyChangedEventArgsEx.PropertyChangedEventArgsEx 构造函数" Url="html/b101cf13-8e53-76a3-9aab-e167d162666e.htm" />
+  <HelpKINode Title="PropertyChanging 事件">
+    <HelpKINode Title="EditorButton.PropertyChanging 事件" Url="html/06c3b240-8ced-2887-4507-adc3c0eaec96.htm" />
+    <HelpKINode Title="SplitContainerControl.PropertyChanging 事件" Url="html/e4474330-bc81-d2a7-0875-270931f769cb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyChangingEventArgsEx 类">
+    <HelpKINode Title="PropertyChangingEventArgsEx 类" Url="html/9c9d0284-b8a4-ea49-0cbb-d8f984db9861.htm" />
+    <HelpKINode Title="关于 PropertyChangingEventArgsEx 类" Url="html/9c9d0284-b8a4-ea49-0cbb-d8f984db9861.htm" />
+    <HelpKINode Title="属性" Url="html/38819e4e-fd5f-c30f-c1ee-bb173bf5dfb3.htm" />
+    <HelpKINode Title="构造函数" Url="html/ce04bace-a309-37ca-e3a2-dc88f250bfd6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PropertyChangingEventArgsEx.Cancel 属性" Url="html/371dc866-9e4d-a886-7f22-e5450a2f9245.htm" />
+  <HelpKINode Title="PropertyChangingEventArgsEx.PropertyChangingEventArgsEx 构造函数" Url="html/ce04bace-a309-37ca-e3a2-dc88f250bfd6.htm" />
+  <HelpKINode Title="QGEditorControl 类">
+    <HelpKINode Title="QGEditorControl 类" Url="html/db2cf0fc-46b7-5cae-6709-37ab7f90184b.htm" />
+    <HelpKINode Title="关于 QGEditorControl 类" Url="html/db2cf0fc-46b7-5cae-6709-37ab7f90184b.htm" />
+    <HelpKINode Title="属性" Url="html/f13b820b-2672-fa22-d112-fc88d6e2f0b3.htm" />
+    <HelpKINode Title="构造函数" Url="html/d4219ea0-f75d-aaca-2ea5-74b37e483db0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="QGEditorControl.DefaultFont 属性" Url="html/02ef9260-8b16-966e-9852-7d746858eaae.htm" />
+  <HelpKINode Title="QGEditorControl.QGEditorControl 构造函数" Url="html/d4219ea0-f75d-aaca-2ea5-74b37e483db0.htm" />
+  <HelpKINode Title="QGEditors.WinForms 命名空间" Url="html/2b8881d5-a568-0c17-9776-8cfe96b872eb.htm" />
+  <HelpKINode Title="QGEditors.WinForms.ButtonEditControl 类" Url="html/a6572857-9fe9-24f0-f172-fef867725270.htm" />
+  <HelpKINode Title="QGEditors.WinForms.ButtonPredefines 枚举" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="QGEditors.WinForms.ButtonPressedEventArgs 类" Url="html/8d1b9975-3d37-58d2-8e15-7995b766bae2.htm" />
+  <HelpKINode Title="QGEditors.WinForms.ButtonPressedEventHandler 委托" Url="html/b4ead5c4-c642-e149-6f72-452b21e77a16.htm" />
+  <HelpKINode Title="QGEditors.WinForms.EditorButton 类" Url="html/476ed614-c272-e677-1765-ed56479f55bd.htm" />
+  <HelpKINode Title="QGEditors.WinForms.EditorButtonCollection 类" Url="html/07f816df-7c76-3afe-226a-3ed6d27ee719.htm" />
+  <HelpKINode Title="QGEditors.WinForms.PropertyChangedEventArgsEx 类" Url="html/407217f2-a227-9777-d093-e4929796f737.htm" />
+  <HelpKINode Title="QGEditors.WinForms.PropertyChangingEventArgsEx 类" Url="html/9c9d0284-b8a4-ea49-0cbb-d8f984db9861.htm" />
+  <HelpKINode Title="QGEditors.WinForms.QGEditorControl 类" Url="html/db2cf0fc-46b7-5cae-6709-37ab7f90184b.htm" />
+  <HelpKINode Title="QGEditors.WinForms.SplitContainerControl 类" Url="html/95ed422c-755a-e345-36e5-e77ca730514f.htm" />
+  <HelpKINode Title="Redo 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Right 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Save 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Search 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="ShortcutKeys 属性" Url="html/f30474ea-c56b-d696-2895-3f7e9d29091c.htm" />
+  <HelpKINode Title="SplitContainerControl 类">
+    <HelpKINode Title="SplitContainerControl 类" Url="html/95ed422c-755a-e345-36e5-e77ca730514f.htm" />
+    <HelpKINode Title="事件" Url="html/ffbc436f-fde0-d231-9564-09075cf464c1.htm" />
+    <HelpKINode Title="关于 SplitContainerControl 类" Url="html/95ed422c-755a-e345-36e5-e77ca730514f.htm" />
+    <HelpKINode Title="属性" Url="html/800dbdaf-7f20-87c0-da15-5c4e3d263421.htm" />
+    <HelpKINode Title="构造函数" Url="html/6d7d3dac-eaa8-4e72-e6b3-1bfd2e1b883a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SplitContainerControl.PropertyChanged 事件" Url="html/49a4a266-82b8-3897-e2aa-a95702d199b7.htm" />
+  <HelpKINode Title="SplitContainerControl.PropertyChanging 事件" Url="html/e4474330-bc81-d2a7-0875-270931f769cb.htm" />
+  <HelpKINode Title="SplitContainerControl.SplitContainerControl 构造函数" Url="html/6d7d3dac-eaa8-4e72-e6b3-1bfd2e1b883a.htm" />
+  <HelpKINode Title="SplitContainerControl.SplitterImage 属性" Url="html/f70f60bc-5e78-004d-6bc2-1693e9908ced.htm" />
+  <HelpKINode Title="SplitContainerControl.SplitterImageLayout 属性" Url="html/d399cd24-b7dd-cd69-358c-5da6489e1a8a.htm" />
+  <HelpKINode Title="SplitterImage 属性" Url="html/f70f60bc-5e78-004d-6bc2-1693e9908ced.htm" />
+  <HelpKINode Title="SplitterImageLayout 属性" Url="html/d399cd24-b7dd-cd69-358c-5da6489e1a8a.htm" />
+  <HelpKINode Title="ToolTip 属性" Url="html/12273374-d456-0dd7-511f-825cd5a6aa84.htm" />
+  <HelpKINode Title="ToString 方法" Url="html/67d40f8f-c0bb-d11d-023e-91c38d57c761.htm" />
+  <HelpKINode Title="Trash 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Undo 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="UnLock 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="Up 枚举成员" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
+  <HelpKINode Title="version">
+    <HelpKINode Title="1.0.0.0" Url="html/65c436a0-1596-41a1-9a10-e1844bf9ada2.htm" />
+    <HelpKINode Title="history" Url="html/277b26d8-ae2f-4a8e-bc19-95dadb38a0fd.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Visible 属性" Url="html/0c0a8b1c-b361-cff9-5282-e54c2744bd71.htm" />
+  <HelpKINode Title="Welcome" Url="html/d349b35c-b5d5-4155-9f2e-c4a2f604dc15.htm" />
+  <HelpKINode Title="Width 属性" Url="html/52fd4069-0963-b8d1-96e7-3af1c92b6ed4.htm" />
+</HelpKI>
