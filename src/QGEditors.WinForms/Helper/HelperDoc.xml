@@ -8,7 +8,7 @@
       </para>
       <para>代码执行的结果显示如下︰</para>
       <img
-        src="https://github.com/GuQiangJS/QGEditors.WinForms/blob/master/src/Images/Previews/1496652533.png?raw=true" />
+        src="https://github.com/GuQiangJS/QGEditors.WinForms/blob/master/src/QGEditors.WinFroms.Example/Resources/ButtonEditControl.png?raw=true" />
       <code language="c#" source="..\..\QGEditors.WinFroms.Example\ButtonEditControlExample.cs" />
     </example>
   </Examples>
@@ -16,7 +16,7 @@
     <remark class="ButtonPredefines" method="none">
       <para>ButtonPredefines 预置的按钮类型：</para>
       <para>
-        <table style="height: 589px; width: 304px" border="0" align="left">
+        <table style="height: 589px; width: 304px" border="0">
           <tbody>
             <tr>
               <td>AT</td>

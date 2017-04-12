@@ -2,34 +2,34 @@
 <HelpTOC>
 
   <HelpTOCNode Title="Welcome to the QGEditors" Url="html/d349b35c-b5d5-4155-9f2e-c4a2f604dc15.htm" />
-  <HelpTOCNode Id="e1a81459-e416-456e-ade5-dde4bf4b7591" Title="Version History" Url="html/277b26d8-ae2f-4a8e-bc19-95dadb38a0fd.htm">
+  <HelpTOCNode Id="1ab45554-7e4f-4904-8dec-a4fff64aa3ce" Title="Version History" Url="html/277b26d8-ae2f-4a8e-bc19-95dadb38a0fd.htm">
     <HelpTOCNode Title="Version 1.0.0.0" Url="html/65c436a0-1596-41a1-9a10-e1844bf9ada2.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="57ab41fa-9aa7-4f83-906d-86701c41094d" Title="QGEditors.WinForms" Url="html/2b8881d5-a568-0c17-9776-8cfe96b872eb.htm">
-    <HelpTOCNode Id="d3c8c21e-efc4-4307-828f-7b35ab3a66b2" Title="ButtonEditControl 类" Url="html/a6572857-9fe9-24f0-f172-fef867725270.htm">
+  <HelpTOCNode Id="6708ca84-a801-47c8-8817-e7359dc50bfa" Title="QGEditors.WinForms" Url="html/2b8881d5-a568-0c17-9776-8cfe96b872eb.htm">
+    <HelpTOCNode Id="b164398c-c335-445c-be0a-b9d82dca8cb0" Title="ButtonEditControl 类" Url="html/a6572857-9fe9-24f0-f172-fef867725270.htm">
       <HelpTOCNode Title="ButtonEditControl 构造函数 " Url="html/b4e34e2f-8839-1f24-695f-e37a78cd8069.htm" />
-      <HelpTOCNode Id="a5cf227a-855a-4ef6-9978-da3f150e01b5" Title="ButtonEditControl 属性" Url="html/0e516d42-c718-64e9-5bc7-31c6f465b863.htm">
+      <HelpTOCNode Id="47b48f00-ca15-4d6e-a1d2-feab1779d9d4" Title="ButtonEditControl 属性" Url="html/0e516d42-c718-64e9-5bc7-31c6f465b863.htm">
         <HelpTOCNode Title="Buttons 属性 " Url="html/bd36099d-cf64-18bc-2a8f-ec8493f9cd6b.htm" />
         <HelpTOCNode Title="Font 属性 " Url="html/8d80b6cb-6fe6-c2fb-1e6b-cc2b9f9899ce.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="b0207abc-ca7f-43f0-8f55-fbe074415ab9" Title="ButtonEditControl 事件" Url="html/dfe7837c-8eff-f873-8b0e-a99126f4e511.htm">
+      <HelpTOCNode Id="1f07a276-8140-4281-9444-a826323e694d" Title="ButtonEditControl 事件" Url="html/dfe7837c-8eff-f873-8b0e-a99126f4e511.htm">
         <HelpTOCNode Title="ButtonClick 事件" Url="html/ab856a95-1245-530c-fd7b-29cb729086c5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ButtonPredefines 枚举" Url="html/404e079c-9a66-464e-3222-cd7a138f754e.htm" />
-    <HelpTOCNode Id="fe36694b-be3c-4fda-8f5e-a5c9b21b4a2c" Title="ButtonPressedEventArgs 类" Url="html/8d1b9975-3d37-58d2-8e15-7995b766bae2.htm">
+    <HelpTOCNode Id="fcbc1471-e125-46d2-b4c9-50a043efc0bf" Title="ButtonPressedEventArgs 类" Url="html/8d1b9975-3d37-58d2-8e15-7995b766bae2.htm">
       <HelpTOCNode Title="ButtonPressedEventArgs 构造函数 " Url="html/6a98f2cb-4e37-702f-70c4-3a07ff2e215a.htm" />
-      <HelpTOCNode Id="a8ba0339-0fbf-4797-b94a-3d9b59c84303" Title="ButtonPressedEventArgs 属性" Url="html/7a6df82b-c92d-bcab-31d0-965c8c2dbfd5.htm">
+      <HelpTOCNode Id="f0d65176-adf3-4ea0-b1a7-fa685893f5a0" Title="ButtonPressedEventArgs 属性" Url="html/7a6df82b-c92d-bcab-31d0-965c8c2dbfd5.htm">
         <HelpTOCNode Title="Button 属性 " Url="html/a8355693-a826-56c6-35a1-fd9157b03b6b.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ButtonPressedEventHandler 委托" Url="html/b4ead5c4-c642-e149-6f72-452b21e77a16.htm" />
-    <HelpTOCNode Id="53656a43-a1e7-449a-958a-492368a88593" Title="EditorButton 类" Url="html/476ed614-c272-e677-1765-ed56479f55bd.htm">
-      <HelpTOCNode Id="d42d4b3d-2483-4d29-86a5-b51586f42aa9" Title="EditorButton 构造函数 " Url="html/324fab15-6b63-1ffc-35d8-614603f1b6ab.htm">
+    <HelpTOCNode Id="b73d31aa-27dd-4ac5-b78b-913375261c01" Title="EditorButton 类" Url="html/476ed614-c272-e677-1765-ed56479f55bd.htm">
+      <HelpTOCNode Id="b2e7530a-a7b0-47d4-9b9c-50a599ae8b95" Title="EditorButton 构造函数 " Url="html/324fab15-6b63-1ffc-35d8-614603f1b6ab.htm">
         <HelpTOCNode Title="EditorButton 构造函数 " Url="html/92e386fa-ed2b-9138-414c-0cc359bb3a7e.htm" />
         <HelpTOCNode Title="EditorButton 构造函数 (ButtonPredefines)" Url="html/db4df122-d116-9a04-3b33-19e824146577.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9cb19509-e8b3-42df-be5c-16e600e58b5e" Title="EditorButton 属性" Url="html/af2e51c1-18e1-1f8c-3d50-2a8b6a7d391d.htm">
+      <HelpTOCNode Id="3d871bfd-9a80-4b3d-99bc-577eb92565ae" Title="EditorButton 属性" Url="html/af2e51c1-18e1-1f8c-3d50-2a8b6a7d391d.htm">
         <HelpTOCNode Title="Caption 属性 " Url="html/4c3be27a-6c6f-a1c0-6966-29144844f9ed.htm" />
         <HelpTOCNode Title="CaptionColor 属性 " Url="html/800aa9c1-15c1-5c46-ee94-6e1709094679.htm" />
         <HelpTOCNode Title="CaptionFont 属性 " Url="html/1aec9814-5983-bb21-9c2f-1c43c8e740b0.htm" />
@@ -47,43 +47,43 @@
         <HelpTOCNode Title="Visible 属性 " Url="html/0c0a8b1c-b361-cff9-5282-e54c2744bd71.htm" />
         <HelpTOCNode Title="Width 属性 " Url="html/52fd4069-0963-b8d1-96e7-3af1c92b6ed4.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="cbd6cd95-ebb1-40fb-afd7-9b1052f5be3c" Title="EditorButton 方法" Url="html/4a5a574e-e573-5eaa-0010-1bcbd89c237a.htm">
+      <HelpTOCNode Id="264ae89b-3e83-4408-8dcb-4875bbe6ac58" Title="EditorButton 方法" Url="html/4a5a574e-e573-5eaa-0010-1bcbd89c237a.htm">
         <HelpTOCNode Title="ToString 方法 " Url="html/67d40f8f-c0bb-d11d-023e-91c38d57c761.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="bd17c79b-ac69-4c1b-8cd2-525808d14b78" Title="EditorButton 事件" Url="html/173a4697-1eaf-b831-ef32-59a67f442a0c.htm">
+      <HelpTOCNode Id="c2e3c409-bb1a-46d1-be9d-a18d8eb90e4f" Title="EditorButton 事件" Url="html/173a4697-1eaf-b831-ef32-59a67f442a0c.htm">
         <HelpTOCNode Title="PropertyChanged 事件" Url="html/47ec9dad-e84d-107f-5b3f-ac28ee4ab132.htm" />
         <HelpTOCNode Title="PropertyChanging 事件" Url="html/06c3b240-8ced-2887-4507-adc3c0eaec96.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="dd985883-1597-409b-8f53-7c2180c23beb" Title="EditorButtonCollection 类" Url="html/07f816df-7c76-3afe-226a-3ed6d27ee719.htm">
+    <HelpTOCNode Id="64716972-2605-44a7-ba0a-2df04ce71bca" Title="EditorButtonCollection 类" Url="html/07f816df-7c76-3afe-226a-3ed6d27ee719.htm">
       <HelpTOCNode Title="EditorButtonCollection 构造函数 " Url="html/12872490-876e-d1d7-9dc2-30882f3ea0a5.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="1620dfd7-de77-430a-9f50-a3691dc47193" Title="PropertyChangedEventArgsEx 类" Url="html/407217f2-a227-9777-d093-e4929796f737.htm">
+    <HelpTOCNode Id="08902eea-a69a-4e6b-9fa0-23b243e5122d" Title="PropertyChangedEventArgsEx 类" Url="html/407217f2-a227-9777-d093-e4929796f737.htm">
       <HelpTOCNode Title="PropertyChangedEventArgsEx 构造函数 " Url="html/b101cf13-8e53-76a3-9aab-e167d162666e.htm" />
-      <HelpTOCNode Id="c3f053b6-d9b8-4e7a-a999-9dca9a275266" Title="PropertyChangedEventArgsEx 属性" Url="html/7d6dbd0c-7a4b-5e4f-e716-7a44c0cc10d5.htm">
+      <HelpTOCNode Id="1c2a0923-cdbc-4ccc-925b-059dae72b73b" Title="PropertyChangedEventArgsEx 属性" Url="html/7d6dbd0c-7a4b-5e4f-e716-7a44c0cc10d5.htm">
         <HelpTOCNode Title="NewValue 属性 " Url="html/a706a383-dd8c-b698-7e3c-91f4c0a1f821.htm" />
         <HelpTOCNode Title="OldValue 属性 " Url="html/bfb41349-6b8d-0e6a-57d4-ea9b3989c5d8.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="919cd2ee-93b8-44ba-9c4e-c3d3a1345d56" Title="PropertyChangingEventArgsEx 类" Url="html/9c9d0284-b8a4-ea49-0cbb-d8f984db9861.htm">
+    <HelpTOCNode Id="693583e2-6b48-4fb0-9c23-4d503a7c39f2" Title="PropertyChangingEventArgsEx 类" Url="html/9c9d0284-b8a4-ea49-0cbb-d8f984db9861.htm">
       <HelpTOCNode Title="PropertyChangingEventArgsEx 构造函数 " Url="html/ce04bace-a309-37ca-e3a2-dc88f250bfd6.htm" />
-      <HelpTOCNode Id="9c37ea54-4d83-4797-99d0-0e9ff5d227b9" Title="PropertyChangingEventArgsEx 属性" Url="html/38819e4e-fd5f-c30f-c1ee-bb173bf5dfb3.htm">
+      <HelpTOCNode Id="01749ff1-aa59-4669-9f6c-1afaddba7eaf" Title="PropertyChangingEventArgsEx 属性" Url="html/38819e4e-fd5f-c30f-c1ee-bb173bf5dfb3.htm">
         <HelpTOCNode Title="Cancel 属性 " Url="html/371dc866-9e4d-a886-7f22-e5450a2f9245.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6bff9c32-9bdd-4b2f-9ab7-02b3ba455b04" Title="QGEditorControl 类" Url="html/db2cf0fc-46b7-5cae-6709-37ab7f90184b.htm">
+    <HelpTOCNode Id="76032381-d7f1-41d7-b97c-592820808091" Title="QGEditorControl 类" Url="html/db2cf0fc-46b7-5cae-6709-37ab7f90184b.htm">
       <HelpTOCNode Title="QGEditorControl 构造函数 " Url="html/d4219ea0-f75d-aaca-2ea5-74b37e483db0.htm" />
-      <HelpTOCNode Id="bb4ab0d0-7ce7-4850-89d3-5f65585909e2" Title="QGEditorControl 属性" Url="html/f13b820b-2672-fa22-d112-fc88d6e2f0b3.htm">
+      <HelpTOCNode Id="b1759fb3-8ce3-4899-973a-f88316e3fc0f" Title="QGEditorControl 属性" Url="html/f13b820b-2672-fa22-d112-fc88d6e2f0b3.htm">
         <HelpTOCNode Title="DefaultFont 属性 " Url="html/02ef9260-8b16-966e-9852-7d746858eaae.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b8c2a319-c47e-48a0-9323-459a8e94c343" Title="SplitContainerControl 类" Url="html/95ed422c-755a-e345-36e5-e77ca730514f.htm">
+    <HelpTOCNode Id="eb75d08c-d25a-4bdc-b5d4-eb7c8e243000" Title="SplitContainerControl 类" Url="html/95ed422c-755a-e345-36e5-e77ca730514f.htm">
       <HelpTOCNode Title="SplitContainerControl 构造函数 " Url="html/6d7d3dac-eaa8-4e72-e6b3-1bfd2e1b883a.htm" />
-      <HelpTOCNode Id="adaafadd-b576-43fe-b439-787a38f6106d" Title="SplitContainerControl 属性" Url="html/800dbdaf-7f20-87c0-da15-5c4e3d263421.htm">
+      <HelpTOCNode Id="6c5b018e-cdb5-4130-8940-e784c82c9c14" Title="SplitContainerControl 属性" Url="html/800dbdaf-7f20-87c0-da15-5c4e3d263421.htm">
         <HelpTOCNode Title="SplitterImage 属性 " Url="html/f70f60bc-5e78-004d-6bc2-1693e9908ced.htm" />
         <HelpTOCNode Title="SplitterImageLayout 属性 " Url="html/d399cd24-b7dd-cd69-358c-5da6489e1a8a.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="44c77d64-75a0-4553-9dc4-06cb42d360bd" Title="SplitContainerControl 事件" Url="html/ffbc436f-fde0-d231-9564-09075cf464c1.htm">
+      <HelpTOCNode Id="dc6a9189-3fc8-49f9-b67a-fef54e45878e" Title="SplitContainerControl 事件" Url="html/ffbc436f-fde0-d231-9564-09075cf464c1.htm">
         <HelpTOCNode Title="PropertyChanged 事件" Url="html/49a4a266-82b8-3897-e2aa-a95702d199b7.htm" />
         <HelpTOCNode Title="PropertyChanging 事件" Url="html/e4474330-bc81-d2a7-0875-270931f769cb.htm" />
       </HelpTOCNode>
