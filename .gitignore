@@ -255,3 +255,4 @@ paket-files/
 /QGEditors.Output.WinForms.Demo
 /QGEditors.Output.Doc
 /outputs
+/src/QGEditors.WinForms.DocBuilders/DocBuilders.Website/WorkPath

@@ -17,7 +17,7 @@ namespace QGEditors.WinForms {
 
         internal const int EM_SETRECT = 0xB3;
 
-        [DllImport("user32.dll")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA5122:PInvokesShouldNotBeSafeCriticalFxCopRule"), DllImport("user32.dll")]
         internal static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wp, IntPtr lp);
     }
 }

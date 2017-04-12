@@ -178,6 +178,11 @@
   <ItemGroup>
     <None Include="Resources\UnLock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Helper\HelperDoc.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>echo f | xcopy /y "$(TargetPath)" "$(SolutionDir)..\outputs\QGEditors.Output.$(ConfigurationName)\$(TargetFileName)"

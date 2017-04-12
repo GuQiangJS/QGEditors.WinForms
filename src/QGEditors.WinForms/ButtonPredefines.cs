@@ -18,6 +18,7 @@ namespace QGEditors.WinForms {
     /// <remarks>
     ///     <see cref="QGEditors.WinForms.ButtonPredefines" /> 类型枚举
     ///     提供了多种按钮控件图像。
+    ///     <include file='Helper/HelperDoc.xml' path='Comments/Remarks/remark[@class="ButtonPredefines" and @method="none"]/*' />
     /// </remarks>
     public enum ButtonPredefines {
         /// <summary>
