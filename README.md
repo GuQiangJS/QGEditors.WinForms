@@ -1,6 +1,18 @@
 # QGEditors.WinForms WinForm控件扩展
 
+[ButtonEditControl](#ButtonEditControl)
+
+## 支持版本
+.NET 3.5
+
+## 编译
+使用 Visual Studio 2012 及以上版本 打开 src/QGEditors.WinForms.sln 解决方案。
+
+编译 QGEditors.WinForms.DocBuilders 相关帮助文档项目时需要使用 [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB/releases)。
+
+
 ## ButtonEditControl
+<span id="ButtonEditControl"></span>
 ![ButtonEditControl](https://github.com/GuQiangJS/QGEditors.WinForms/blob/master/src/Images/Previews/ButtonEditControl.png?raw=true)
 
 ### Example:
