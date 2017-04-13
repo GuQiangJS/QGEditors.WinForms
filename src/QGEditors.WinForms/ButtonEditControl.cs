@@ -21,11 +21,16 @@ namespace QGEditors.WinForms {
     /// </summary>
     /// <remarks>
     ///     <para>ButtonEditControl编辑器是文本编辑器，允许您在编辑框中显示无限数量的按钮。</para>
-    ///     <para>ButtonEditControl类提供Buttons属性来访问编辑器中显示的按钮集合。每个按钮都由<see cref="EditorButton"/>对象表示，该对象提供了一些指定按钮的外观，快捷方式，可见性，提示文本等属性。</para>
-    ///     <para>通过处理<see cref="ButtonEditControl.ButtonClick"/>事件来响应点击编辑器按钮事件。</para>
+    ///     <para>
+    ///         ButtonEditControl类提供Buttons属性来访问编辑器中显示的按钮集合。每个按钮都由<see cref="EditorButton" />
+    ///         对象表示，该对象提供了一些指定按钮的外观，快捷方式，可见性，提示文本等属性。
+    ///         通过设置<see cref="EditorButton.Kind" />属性可以选择使用<see cref="ButtonPredefines" />预置的按钮类型。
+    ///     </para>
+    ///     <para>通过处理<see cref="ButtonEditControl.ButtonClick" />事件来响应点击编辑器按钮事件。</para>
     /// </remarks>
     /// <example>
-    ///     <include file='Helper/HelperDoc.xml' path='Comments/Examples/example[@class="ButtonEditControl" and @method="none"]/*' />
+    ///     <include file='Helper/HelperDoc.xml'
+    ///         path='Comments/Examples/example[@class="ButtonEditControl" and @method="none"]/*' />
     /// </example>
     [DefaultProperty("Buttons")]
     [DefaultEvent("ButtonClick")]
